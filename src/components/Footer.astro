@@ -5,43 +5,62 @@ const year = new Date().getFullYear();
 <footer class="footer">
 
   <!-- Stave divider -->
-  <svg class="footer__stave" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true">
-    <line x1="0" y1="20" x2="1440" y2="20" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
-    <line x1="0" y1="28" x2="1440" y2="28" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
-    <line x1="0" y1="36" x2="1440" y2="36" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
-    <line x1="0" y1="44" x2="1440" y2="44" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
-    <line x1="0" y1="52" x2="1440" y2="52" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+  <svg class="footer__stave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="0" y1="12" x2="1440" y2="12" stroke="#b7c6c2" stroke-width="0.5" opacity="0.08"/>
+    <line x1="0" y1="20" x2="1440" y2="20" stroke="#b7c6c2" stroke-width="0.5" opacity="0.08"/>
+    <line x1="0" y1="28" x2="1440" y2="28" stroke="#b7c6c2" stroke-width="0.5" opacity="0.08"/>
+    <line x1="0" y1="36" x2="1440" y2="36" stroke="#b7c6c2" stroke-width="0.5" opacity="0.08"/>
   </svg>
 
-  <!-- CTA block — Loud (ff) -->
-  <div class="footer__cta">
-    <span class="footer__mark">ff</span>
-    <h2 class="footer__heading">Let's<br/>Create.</h2>
-    <a href="mailto:hello@executivechoral.co.uk" class="footer__email">
-      hello@executivechoral.co.uk
-    </a>
+  <!-- Main footer body -->
+  <div class="footer__body container">
 
-    <div class="footer__nav-links">
-      <a href="/what-we-do/">What We Do</a>
-      <a href="/packages/">Packages</a>
-      <a href="/about/">About</a>
-      <a href="/insights/">Insights</a>
-      <a href="/contact/">Contact</a>
+    <!-- Brand column -->
+    <div class="footer__brand">
+      <a href="/" class="footer__logo" aria-label="ECCT Home">ECCT</a>
+      <p class="footer__tagline">Choral conducting training that builds presence, communication, and trust.</p>
+      <a href="mailto:hello@executivechoral.co.uk" class="footer__email">
+        hello@executivechoral.co.uk
+      </a>
     </div>
+
+    <!-- Nav columns -->
+    <div class="footer__nav-group">
+      <div class="footer__nav-col">
+        <span class="footer__nav-heading">Explore</span>
+        <nav aria-label="Footer navigation">
+          <a href="/what-we-do/" class="footer__nav-link">What We Do</a>
+          <a href="/packages/" class="footer__nav-link">Packages</a>
+          <a href="/about/" class="footer__nav-link">About</a>
+          <a href="/insights/" class="footer__nav-link">Insights</a>
+          <a href="/contact/" class="footer__nav-link">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer__nav-col">
+        <span class="footer__nav-heading">Programmes</span>
+        <nav aria-label="Programmes navigation">
+          <a href="/packages/#in-office" class="footer__nav-link">Taster Session</a>
+          <a href="/packages/#in-office" class="footer__nav-link">Full Day</a>
+          <a href="/packages/#in-office" class="footer__nav-link">Three-Day</a>
+          <a href="/packages/#in-office" class="footer__nav-link">Week-Long</a>
+          <a href="/packages/#church-venue" class="footer__nav-link">Church Venues</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- CTA column -->
+    <div class="footer__cta-col">
+      <span class="footer__nav-heading">Ready to lead?</span>
+      <p class="footer__cta-text">Book a free thirty-minute consultation with our music director.</p>
+      <a href="/contact/#booking" class="btn btn--secondary footer__cta-btn">Book a Session</a>
+    </div>
+
   </div>
 
-  <!-- Stave divider -->
-  <svg class="footer__stave" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true">
-    <line x1="0" y1="20" x2="1440" y2="20" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
-    <line x1="0" y1="28" x2="1440" y2="28" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
-    <line x1="0" y1="36" x2="1440" y2="36" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
-    <line x1="0" y1="44" x2="1440" y2="44" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
-    <line x1="0" y1="52" x2="1440" y2="52" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
-  </svg>
-
-  <!-- Bottom bar — Whisper -->
-  <div class="footer__bottom">
-    <p>&copy; {year} Executive Choral Conducting Training</p>
+  <!-- Bottom bar -->
+  <div class="footer__bottom container">
+    <p>&copy; {year} Executive Choral Conducting Training. All rights reserved.</p>
     <div class="footer__legal">
       <a href="/privacy/">Privacy Policy</a>
     </div>
@@ -58,45 +77,51 @@ const year = new Date().getFullYear();
   .footer__stave {
     display: block;
     width: 100%;
-    height: 64px;
+    height: 48px;
   }
 
-  /* CTA block */
-  .footer__cta {
-    padding: 5rem 6vw 5rem;
+  /* Body */
+  .footer__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-top: 0.5px solid rgba(183, 198, 194, 0.08);
   }
 
-  .footer__mark {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    letter-spacing: 0.12em;
+  /* Brand col */
+  .footer__logo {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--sage);
-    opacity: 0.4;
+    color: var(--white);
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer__tagline {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--taupe);
+    max-width: 260px;
     margin-bottom: 1.5rem;
   }
 
-  .footer__heading {
-    font-family: var(--font-display);
-    font-size: clamp(5rem, 9rem, 9rem);
-    line-height: 0.88;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: var(--white);
-    margin-bottom: 2.5rem;
-  }
-
   .footer__email {
-    display: inline-block;
+    display: inline-flex;
     font-family: var(--font-sans);
-    font-size: clamp(1.25rem, 2.5rem, 2.5rem);
-    font-weight: 300;
+    font-size: 0.875rem;
+    font-weight: 400;
     color: var(--sage);
     text-decoration: none;
     position: relative;
-    margin-bottom: 4rem;
     padding-bottom: 2px;
+    transition: opacity 300ms ease;
   }
 
   .footer__email::after {
@@ -105,7 +130,7 @@ const year = new Date().getFullYear();
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 0.5px;
     background-color: var(--sage);
     transition: width 300ms var(--ease-out);
   }
@@ -114,33 +139,73 @@ const year = new Date().getFullYear();
     width: 100%;
   }
 
-  .footer__nav-links {
-    display: flex;
-    flex-wrap: wrap;
+  /* Nav group */
+  .footer__nav-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
 
-  .footer__nav-links a {
+  .footer__nav-heading {
+    display: block;
     font-family: var(--font-mono);
-    font-size: 0.6875rem;
+    font-size: 0.5625rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--taupe);
     opacity: 0.5;
-    text-decoration: none;
-    transition: color 600ms var(--ease-out), opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+    margin-bottom: 1.25rem;
   }
 
-  .footer__nav-links a:hover {
+  .footer__nav-col nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer__nav-link {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 300ms ease, transform 300ms ease;
+    display: inline-block;
+  }
+
+  .footer__nav-link:hover {
     color: var(--white);
-    opacity: 1;
-    transform: translateX(4px);
+    transform: translateX(3px);
+  }
+
+  /* CTA col */
+  .footer__cta-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .footer__cta-text {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--taupe);
+    max-width: 240px;
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  .footer__cta-btn {
+    align-self: flex-start;
+    font-size: 0.625rem;
+    padding: 10px 20px;
   }
 
   /* Bottom bar */
   .footer__bottom {
-    padding: 1.5rem 6vw;
-    border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.06);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -149,15 +214,15 @@ const year = new Date().getFullYear();
   .footer__bottom p,
   .footer__bottom a {
     font-family: var(--font-mono);
-    font-size: 0.6875rem;
+    font-size: 0.5625rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--taupe);
-    opacity: 0.5;
+    opacity: 0.4;
   }
 
   .footer__bottom a:hover {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   .footer__legal {
@@ -166,6 +231,12 @@ const year = new Date().getFullYear();
   }
 
   @media (min-width: 768px) {
+    .footer__body {
+      grid-template-columns: 2fr 2fr 1.5fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
     .footer__bottom {
       flex-direction: row;
       justify-content: space-between;

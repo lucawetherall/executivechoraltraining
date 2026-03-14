@@ -9,7 +9,7 @@ const navLinks = [
 ];
 ---
 
-<header class="nav" id="nav" role="banner">
+<header class="nav" id="nav" role="banner" data-scrolled="false">
   <a href="/" class="nav__logo" aria-label="ECCT Home">ECCT</a>
 
   <nav class="nav__links" id="nav-links" aria-label="Main navigation">
@@ -58,6 +58,16 @@ const navLinks = [
     padding: 28px 48px;
     background: transparent;
     pointer-events: none;
+    transition: padding 400ms var(--ease-out), background-color 400ms ease;
+  }
+
+  .nav[data-scrolled="true"] {
+    mix-blend-mode: normal;
+    background: rgba(23, 30, 25, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 16px 48px;
+    border-bottom: 0.5px solid rgba(183, 198, 194, 0.1);
   }
 
   /* Re-enable pointer events on interactive children */
@@ -204,6 +214,12 @@ const navLinks = [
 </style>
 
 <script>
+  // Scroll-aware nav
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav?.setAttribute('data-scrolled', window.scrollY > 60 ? 'true' : 'false');
+  }, { passive: true });
+
   const toggle = document.getElementById('nav-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
 
