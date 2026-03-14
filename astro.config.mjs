@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://lucawetherall.github.io',
-  base: '/executivechoraltraining',
+  base: '/executivechoraltraining/',
   integrations: [sitemap()],
   output: 'static',
 });
