@@ -1,0 +1,49 @@
+---
+interface Props {
+  headline: string;
+  body: string;
+  buttonText: string;
+  buttonLink: string;
+  variant?: 'navy' | 'light';
+}
+
+const { headline, body, buttonText, buttonLink, variant = 'navy' } = Astro.props;
+---
+
+<section class:list={['cta-band', `cta-band--${variant}`]}>
+  <div class="container text-center">
+    <h2>{headline}</h2>
+    <p>{body}</p>
+    <a href={buttonLink} class="btn btn--primary">{buttonText}</a>
+  </div>
+</section>
+
+<style>
+  .cta-band {
+    padding: 5rem 0;
+  }
+
+  .cta-band--navy {
+    background-color: var(--navy);
+    color: var(--white);
+  }
+
+  .cta-band--navy h2 {
+    color: var(--white);
+  }
+
+  .cta-band--light {
+    background-color: var(--light-bg);
+  }
+
+  .cta-band h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .cta-band p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+</style>

@@ -1,0 +1,56 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  link: string;
+}
+
+const { title, description, link } = Astro.props;
+---
+
+<a href={link} class="audience-card card">
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <span class="audience-card__arrow">&rarr;</span>
+</a>
+
+<style>
+  .audience-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .audience-card:hover {
+    transform: translateY(-2px);
+    color: inherit;
+  }
+
+  .audience-card h3 {
+    margin-bottom: 0.75rem;
+    transition: color 0.2s ease;
+  }
+
+  .audience-card:hover h3 {
+    color: var(--gold);
+  }
+
+  .audience-card p {
+    color: var(--mid-grey);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .audience-card__arrow {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: var(--gold);
+    transition: transform 0.2s ease;
+  }
+
+  .audience-card:hover .audience-card__arrow {
+    transform: translateX(4px);
+  }
+</style>

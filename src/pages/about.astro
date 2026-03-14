@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
+import TeamCard from '../components/TeamCard.astro';
+---
+
+<BaseLayout
+  title="About — Executive Choral Conducting Training"
+  description="We are musicians and educators who built ECCT because we saw what the conducting podium does to people who step onto it. Meet our team and our choir, the Alma Consort."
+>
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>About us.</h1>
+    </div>
+  </section>
+
+  <!-- Brand Story -->
+  <section class="section">
+    <div class="container">
+      <div class="prose">
+        <p>Executive Choral Conducting Training exists because we believe leadership is a physical act. It lives in the body — in how you stand, how you breathe, how you hold attention, how you respond when things don't go as planned. Most leadership development treats these qualities as peripheral. We put them at the centre.</p>
+        <p>Our method is simple. We give you a baton, a professional choir, and a piece of music. Then we ask you to lead. What happens next is more revealing, more demanding, and more rewarding than any workshop we've encountered — and we've encountered a lot of them.</p>
+        <p>We are musicians and educators who have spent careers working at the highest levels of choral performance and music education. We built ECCT because we saw what the conducting podium does to people who step onto it: it clarifies something about how they lead that nothing else quite reaches.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Choir -->
+  <section class="section section--light">
+    <div class="container">
+      <h2 class="text-center choir-heading">Our Choir: The Alma Consort</h2>
+      <div class="choir-layout">
+        <div class="choir-text">
+          <p>Our workshops are delivered with the Alma Consort, a professional choir based in London. The ensemble comprises highly experienced singers who work across classical, pop, and jazz repertoire, and are accustomed to demanding, high-pressure engagements with rapid turnarounds.</p>
+          <p>The quality of the choir matters. When your team steps onto the podium, they need to be working with musicians who will respond precisely to what they give — no more and no less. The Alma Consort provides exactly that: a professional ensemble whose standard is high enough to make the conducting experience honest.</p>
+          <p><a href="https://www.almaconsort.com" target="_blank" rel="noopener noreferrer">Visit the Alma Consort website &rarr;</a></p>
+        </div>
+        <div class="choir-video">
+          <VideoEmbed caption="The Alma Consort in performance." />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center choir-heading">Our Team</h2>
+      <div class="grid-2 team-grid">
+        <TeamCard
+          name="[Music Director]"
+          role="Music Director / Lead Facilitator"
+          bio="A conductor, singer, and educator based in London. Holds a Clarendon Scholarship at the University of Oxford, where they teach at the Faculty of Music and undertake doctoral research. Directs the Alma Consort and has extensive experience in choral conducting, vocal production, and music education across multiple genres."
+        />
+        <TeamCard
+          name="[Co-Director]"
+          role="Co-Director"
+          bio="A pianist, conductor, and singer based in London. A graduate of the University of Oxford and the Royal Academy of Music, bringing expertise in collaborative performance, ensemble direction, and music education to ECCT's programmes."
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .choir-heading {
+    margin-bottom: 3rem;
+  }
+
+  .choir-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .choir-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--mid-grey);
+  }
+
+  .choir-text a {
+    font-weight: 600;
+  }
+
+  .team-grid {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .choir-layout {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+interface Props {
+  heading: string;
+  description: string;
+  icon: string;
+}
+
+const { heading, description, icon } = Astro.props;
+---
+
+<div class="outcome-tile">
+  <div class="outcome-tile__icon" set:html={icon} />
+  <h3>{heading}</h3>
+  <p>{description}</p>
+</div>
+
+<style>
+  .outcome-tile {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  }
+
+  .outcome-tile__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.25rem;
+    color: var(--gold);
+  }
+
+  .outcome-tile__icon :global(svg) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .outcome-tile h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .outcome-tile p {
+    color: var(--mid-grey);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+</style>

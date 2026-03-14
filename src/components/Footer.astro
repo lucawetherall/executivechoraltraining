@@ -1,0 +1,120 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="footer__logo">ECCT</span>
+        <p>Executive Choral Conducting Training. Leadership development through the art of conducting.</p>
+        <p class="footer__tagline">Feel what leadership sounds like.</p>
+      </div>
+
+      <div class="footer__nav">
+        <h4>Pages</h4>
+        <a href="/">Home</a>
+        <a href="/what-we-do/">What We Do</a>
+        <a href="/packages/">Packages</a>
+        <a href="/about/">About</a>
+        <a href="/insights/">Insights</a>
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="footer__contact">
+        <h4>Get in Touch</h4>
+        <a href="mailto:hello@executivechoral.co.uk">hello@executivechoral.co.uk</a>
+        <a href="tel:+442079460123">+44 20 7946 0123</a>
+        <a href="/contact/#booking">Book a Free Consultation</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; {year} Executive Choral Conducting Training. All rights reserved.</p>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--navy);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 4rem 0 2rem;
+  }
+
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer__logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .footer__tagline {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .footer__nav h4,
+  .footer__contact h4 {
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .footer__nav a,
+  .footer__contact a {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s ease;
+  }
+
+  .footer__nav a:hover,
+  .footer__contact a:hover {
+    color: var(--gold);
+  }
+
+  .footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .footer__bottom a {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .footer__bottom a:hover {
+    color: var(--gold);
+  }
+
+  @media (min-width: 768px) {
+    .footer__grid {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .footer__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+</style>

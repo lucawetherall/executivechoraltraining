@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PackageCard from '../components/PackageCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+
+<BaseLayout
+  title="Packages — Executive Choral Conducting Training"
+  description="From a half-day taster to a week-long immersion. In your office, or in a London church. Conducting-based leadership training packages from ECCT."
+>
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Packages.</h1>
+      <p>From a half-day taster to a week-long immersion. In your office, or in a London church.</p>
+    </div>
+  </section>
+
+  <!-- In-Office Packages -->
+  <section class="section" id="in-office">
+    <div class="container">
+      <div class="prose text-center" style="margin-bottom: 3rem;">
+        <p>Our core offering. We bring the Alma Consort to your workplace or conference venue and deliver conducting-based leadership training tailored to your team's needs, schedule, and objectives. All in-office packages are flexible — contact us to discuss your requirements.</p>
+      </div>
+      <div class="packages-grid">
+        <PackageCard
+          title="Taster Session"
+          price="From £2,000"
+          description="A half-day introduction to conducting as leadership development. Ideal for team-building days or conference breakout sessions. Includes ensemble warm-up, conducting basics, and a group rehearsal with the choir. The fastest way to find out what the podium reveals about your team."
+          ctaText="Book Now"
+          ctaLink="/contact/#booking"
+        />
+        <PackageCard
+          title="Full Day"
+          description="A comprehensive single-day programme. Morning: technique and fundamentals. Afternoon: ensemble leadership with the full choir. Closing: structured debrief connecting the experience to your team's working context. Suited to leadership away-days and dedicated development sessions."
+          ctaText="Get a Quote"
+          ctaLink="/contact/?package=Full+Day"
+        />
+        <PackageCard
+          title="Three-Day Programme"
+          description="Intensive leadership development across three days. Day one builds the foundations. Day two introduces advanced conducting technique and ensemble management. Day three culminates in a performance and extended reflection. Designed for senior leadership teams who want depth, not novelty."
+          ctaText="Get a Quote"
+          ctaLink="/contact/?package=Three-Day+Programme"
+        />
+        <PackageCard
+          title="Week-Long Programme"
+          description="The full executive conducting immersion. Progressive skill development across five days, building from fundamentals to advanced musicianship and ensemble direction. Concludes with a private performance for an invited audience. Our most intensive and rewarding offering."
+          ctaText="Get a Quote"
+          ctaLink="/contact/?package=Week-Long+Programme"
+        />
+        <PackageCard
+          title="Custom"
+          description="Bespoke programmes designed around your organisation's specific objectives, team size, schedule, and ambition. We have delivered conducting workshops as conference keynote experiences, board retreat centrepieces, and graduate programme modules. Tell us what you need."
+          ctaText="Get a Quote"
+          ctaLink="/contact/?package=Custom"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Church Venue -->
+  <section class="section church-section" id="church-venue">
+    <div class="container">
+      <h2>Premium Church Venue Packages</h2>
+      <div class="church-content">
+        <p>For organisations seeking something extraordinary. Our premium packages take place in beautiful London churches, combining the acoustic grandeur of a historic sacred space with the intensity of professional musical leadership training. The setting transforms the experience: the resonance of the building, the beauty of the architecture, the weight of the occasion.</p>
+        <h3>What's included:</h3>
+        <ul>
+          <li>All programme tiers available (full day, three-day, week-long)</li>
+          <li>Venue hire, acoustic setup, and logistics managed entirely by ECCT</li>
+          <li>Optional catering and hospitality</li>
+          <li>Professional photography and videography of your sessions</li>
+        </ul>
+        <a href="/contact/?package=Premium+Church+Venue" class="btn btn--primary">Enquire About Church Venues</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Consultation -->
+  <CtaBand
+    headline="Not sure where to start?"
+    body="Book a free, no-obligation conducting consultation with our music director. In thirty minutes, you'll experience a taste of what the podium feels like — and we'll discuss which programme would suit your team best."
+    buttonText="Book Your Free Consultation"
+    buttonLink="/contact/#booking"
+    variant="light"
+  />
+</BaseLayout>
+
+<style>
+  .packages-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .packages-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .packages-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .church-section {
+    background: linear-gradient(135deg, #2a1f14 0%, #1B2A4A 100%);
+    color: var(--white);
+  }
+
+  .church-section h2 {
+    color: var(--gold);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .church-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .church-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .church-content h3 {
+    color: var(--white);
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+
+  .church-content ul {
+    margin-bottom: 2.5rem;
+    padding-left: 0;
+  }
+
+  .church-content li {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .church-content li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  .church-content .btn {
+    display: inline-block;
+  }
+</style>
