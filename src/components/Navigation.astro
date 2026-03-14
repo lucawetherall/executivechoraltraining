@@ -15,12 +15,12 @@ const navLinks = [
 ---
 
 <header class="nav" id="nav" role="banner" data-scrolled="false">
-  <a href="/" class="nav__logo" aria-label="ECCT Home">ECCT</a>
+  <a href={base} class="nav__logo" aria-label="ECCT Home">ECCT</a>
 
   <nav class="nav__links" id="nav-links" aria-label="Main navigation">
     {navLinks.map(link => (
       <a
-        href={link.href}
+        href={base + link.href.slice(1)}
         class:list={['nav__link', { 'nav__link--active': currentPath === link.href }]}
       >
         {link.label}
@@ -28,7 +28,7 @@ const navLinks = [
     ))}
   </nav>
 
-  <a href="/contact/#booking" class="btn btn--nav nav__cta">Book a Session</a>
+  <a href={base + 'contact/#booking'} class="btn btn--nav nav__cta">Book a Session</a>
 
   <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
     <span></span>
@@ -40,13 +40,13 @@ const navLinks = [
 <!-- Mobile menu overlay — outside nav so it doesn't inherit mix-blend-mode -->
 <div class="nav__mobile-menu" id="mobile-menu" aria-hidden="true">
   <nav aria-label="Mobile navigation">
-    <a href="/" class="nav__mobile-link">Home</a>
+    <a href={base} class="nav__mobile-link">Home</a>
     {navLinks.map(link => (
-      <a href={link.href} class="nav__mobile-link">{link.label}</a>
+      <a href={base + link.href.slice(1)} class="nav__mobile-link">{link.label}</a>
     ))}
-    <a href="/contact/" class="nav__mobile-link">Contact</a>
+    <a href={base + 'contact/'} class="nav__mobile-link">Contact</a>
   </nav>
-  <a href="/contact/#booking" class="nav__mobile-cta">Book a Session →</a>
+  <a href={base + 'contact/#booking'} class="nav__mobile-cta">Book a Session →</a>
 </div>
 
 <style>

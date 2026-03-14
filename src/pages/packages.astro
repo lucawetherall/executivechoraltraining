@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PackageCard from '../components/PackageCard.astro';
 import CtaBand from '../components/CtaBand.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -75,7 +76,7 @@ import CtaBand from '../components/CtaBand.astro';
           <li>Optional catering and hospitality</li>
           <li>Professional photography and videography of your sessions</li>
         </ul>
-        <a href="/contact/?package=Premium+Church+Venue" class="btn btn--primary">Enquire About Church Venues</a>
+        <a href={base + 'contact/?package=Premium+Church+Venue'} class="btn btn--primary">Enquire About Church Venues</a>
       </div>
     </div>
   </section>
