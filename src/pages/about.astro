@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import VideoEmbed from '../components/VideoEmbed.astro';
 import TeamCard from '../components/TeamCard.astro';
+import CtaBand from '../components/CtaBand.astro';
 ---
 
 <BaseLayout
@@ -13,60 +14,215 @@ import TeamCard from '../components/TeamCard.astro';
     <div class="container">
       <span class="section-label">ECCT</span>
       <h1>About us.</h1>
+      <p>Musicians and educators who believe leadership is a physical act — and that the podium proves it.</p>
     </div>
   </section>
 
   <!-- Brand Story -->
   <section class="section">
     <div class="container">
-      <div class="prose">
-        <p>Executive Choral Conducting Training exists because we believe leadership is a physical act. It lives in the body — in how you stand, how you breathe, how you hold attention, how you respond when things don't go as planned. Most leadership development treats these qualities as peripheral. We put them at the centre.</p>
-        <p>Our method is simple. We give you a baton, a professional choir, and a piece of music. Then we ask you to lead. What happens next is more revealing, more demanding, and more rewarding than any workshop we've encountered — and we've encountered a lot of them.</p>
-        <p>We are musicians and educators who have spent careers working at the highest levels of choral performance and music education. We built ECCT because we saw what the conducting podium does to people who step onto it: it clarifies something about how they lead that nothing else quite reaches.</p>
+      <div class="story-layout">
+        <div class="story-label">
+          <span class="section-label">Our Story</span>
+          <span class="dynamic-mark">§ 01</span>
+        </div>
+        <div class="prose reveal">
+          <p>Executive Choral Conducting Training exists because we believe leadership is a physical act. It lives in the body — in how you stand, how you breathe, how you hold attention, how you respond when things don't go as planned. Most leadership development treats these qualities as peripheral. We put them at the centre.</p>
+          <p>Our method is simple. We give you a baton, a professional choir, and a piece of music. Then we ask you to lead. What happens next is more revealing, more demanding, and more rewarding than any workshop we've encountered — and we've encountered a lot of them.</p>
+          <p>We are musicians and educators who have spent careers working at the highest levels of choral performance and music education. We built ECCT because we saw what the conducting podium does to people who step onto it: it clarifies something about how they lead that nothing else quite reaches.</p>
+          <p>There is no simulation here. No role-play, no acted scenario. The choir is real, the music is real, and the response to your gesture is immediate and unambiguous. That honesty is exactly what makes it work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="section-rule"></div>
+
+  <!-- Values -->
+  <section class="section section--light">
+    <div class="container">
+      <span class="section-label text-center" style="display:block">What We Stand For</span>
+      <h2 class="text-center values-heading">Our principles.</h2>
+      <div class="values-grid">
+        <div class="value-block reveal">
+          <span class="value-num">01</span>
+          <h3>Honesty over comfort</h3>
+          <p>The podium doesn't let you hide. We design every session so that the feedback is real — not softened by politeness or obscured by abstraction. Leaders grow fastest when they can see exactly what they're doing.</p>
+        </div>
+        <div class="value-block reveal">
+          <span class="value-num">02</span>
+          <h3>Craft above all</h3>
+          <p>The quality of the ensemble matters profoundly. We work only with professional musicians whose standard is high enough to make the conducting experience credible. You cannot fool thirty trained singers.</p>
+        </div>
+        <div class="value-block reveal">
+          <span class="value-num">03</span>
+          <h3>Experience, not explanation</h3>
+          <p>We believe in doing rather than describing. Every insight that emerges from an ECCT session is earned on the podium, not extracted from a slide. The body learns things the mind cannot be told.</p>
+        </div>
+        <div class="value-block reveal">
+          <span class="value-num">04</span>
+          <h3>Rigour and joy</h3>
+          <p>Serious work and genuine enjoyment are not opposites. Our sessions are demanding — and they are also, consistently, among the most energising experiences participants report having in a professional context.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Our Choir -->
-  <section class="section section--light">
+  <section class="section">
     <div class="container">
       <span class="section-label text-center" style="display:block">The Ensemble</span>
-      <h2 class="text-center choir-heading">Our Choir: The Alma Consort</h2>
+      <h2 class="text-center choir-heading">Our choir: The Alma Consort.</h2>
       <div class="choir-layout">
-        <div class="choir-text">
+        <div class="choir-text reveal">
           <p>Our workshops are delivered with the Alma Consort, a professional choir based in London. The ensemble comprises highly experienced singers who work across classical, pop, and jazz repertoire, and are accustomed to demanding, high-pressure engagements with rapid turnarounds.</p>
           <p>The quality of the choir matters. When your team steps onto the podium, they need to be working with musicians who will respond precisely to what they give — no more and no less. The Alma Consort provides exactly that: a professional ensemble whose standard is high enough to make the conducting experience honest.</p>
-          <p><a href="https://www.almaconsort.com" target="_blank" rel="noopener noreferrer">Visit the Alma Consort website &rarr;</a></p>
+          <p>The choir has performed at some of the UK's foremost venues, including the Barbican, Wigmore Hall, and the BBC Proms. Their breadth of repertoire — from Renaissance polyphony to contemporary pop arrangements — means we can match the musical content to your team's profile and the programme's objectives.</p>
+          <p><a href="https://www.almaconsort.com" target="_blank" rel="noopener noreferrer" class="text-link">Visit the Alma Consort website &rarr;</a></p>
         </div>
-        <div class="choir-video">
+        <div class="choir-video reveal">
           <VideoEmbed caption="The Alma Consort in performance." />
+          <div class="choir-credentials">
+            <div class="credential">
+              <span class="credential-num">30+</span>
+              <span class="credential-label">Professional singers</span>
+            </div>
+            <div class="credential">
+              <span class="credential-num">3</span>
+              <span class="credential-label">Concert halls</span>
+            </div>
+            <div class="credential">
+              <span class="credential-num">10+</span>
+              <span class="credential-label">Years performing</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Our Team -->
-  <section class="section">
+  <section class="section section--light">
     <div class="container">
       <span class="section-label text-center" style="display:block">The People</span>
-      <h2 class="text-center choir-heading">Our Team</h2>
+      <h2 class="text-center choir-heading">Our team.</h2>
+      <p class="team-intro text-center">ECCT is led by two musicians with deep roots in professional choral performance, music education, and the academic study of conducting.</p>
       <div class="grid-2 team-grid">
         <TeamCard
-          name="[Music Director]"
+          name="Luca Wetherall"
           role="Music Director / Lead Facilitator"
-          bio="A conductor, singer, and educator based in London. Holds a Clarendon Scholarship at the University of Oxford, where they teach at the Faculty of Music and undertake doctoral research. Directs the Alma Consort and has extensive experience in choral conducting, vocal production, and music education across multiple genres."
+          bio="A conductor, singer, and educator based in London. Holds a Clarendon Scholarship at the University of Oxford, where they teach at the Faculty of Music and undertake doctoral research in choral conducting. Directs the Alma Consort and brings extensive experience in vocal production, ensemble direction, and music education across multiple genres to every ECCT session."
         />
         <TeamCard
-          name="[Co-Director]"
+          name="Co-Director"
           role="Co-Director"
-          bio="A pianist, conductor, and singer based in London. A graduate of the University of Oxford and the Royal Academy of Music, bringing expertise in collaborative performance, ensemble direction, and music education to ECCT's programmes."
+          bio="A pianist, conductor, and singer based in London. A graduate of the University of Oxford and the Royal Academy of Music, bringing expertise in collaborative performance, ensemble direction, and music education to ECCT's programmes. Designs the pedagogical framework that links conducting technique to leadership development."
         />
       </div>
     </div>
   </section>
+
+  <!-- Why We Built This -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="pull-quote-layout">
+        <span class="dynamic-mark" style="color: var(--sage); opacity: 0.6;">§ 02</span>
+        <blockquote class="pull-quote reveal">
+          "The podium is the most honest feedback environment in any profession. If your gesture is ambiguous, the sound fractures. If your attention drifts, the ensemble loses cohesion. There is nowhere to hide — and that is precisely the point."
+        </blockquote>
+        <p class="pull-quote-attr">— ECCT founders</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CtaBand
+    label="Work with us"
+    headline="Ready to step onto the podium?"
+    body="Explore our programmes or get in touch to discuss a bespoke session for your organisation."
+    buttonText="View packages"
+    buttonLink="/packages/"
+  />
 </BaseLayout>
 
 <style>
+  /* Story layout */
+  .story-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .story-layout {
+      grid-template-columns: 220px 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+  }
+
+  .story-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.25rem;
+  }
+
+  /* Section rule */
+  .section-rule {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    border-bottom: 0.5px solid var(--border-subtle);
+  }
+
+  /* Values grid */
+  .values-heading {
+    margin-bottom: 3.5rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .values-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .value-block {
+    padding: 2rem 0;
+    border-top: 0.5px solid var(--border-subtle);
+    position: relative;
+  }
+
+  .value-num {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--sage);
+    margin-bottom: 1rem;
+  }
+
+  .value-block h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.875rem;
+    color: var(--navy);
+  }
+
+  .value-block p {
+    color: var(--mid-grey);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  /* Choir section */
   .choir-heading {
     margin-bottom: 3rem;
   }
@@ -75,7 +231,14 @@ import TeamCard from '../components/TeamCard.astro';
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
-    align-items: center;
+    align-items: start;
+  }
+
+  @media (min-width: 768px) {
+    .choir-layout {
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
   }
 
   .choir-text p {
@@ -84,18 +247,87 @@ import TeamCard from '../components/TeamCard.astro';
     color: var(--mid-grey);
   }
 
-  .choir-text a {
+  .text-link {
     font-weight: 600;
+    color: var(--navy);
+    border-bottom: 0.5px solid var(--border-subtle);
+    padding-bottom: 1px;
+    transition: border-color 400ms var(--ease-out), color 400ms var(--ease-out);
+  }
+
+  .text-link:hover {
+    border-color: var(--navy);
+  }
+
+  /* Choir credentials */
+  .choir-credentials {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 0.5px solid var(--border-subtle);
+  }
+
+  .credential {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .credential-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--navy);
+  }
+
+  .credential-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--taupe);
+  }
+
+  /* Team */
+  .team-intro {
+    color: var(--mid-grey);
+    font-size: 1.05rem;
+    max-width: 540px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
   }
 
   .team-grid {
-    max-width: 800px;
+    max-width: 860px;
     margin: 0 auto;
   }
 
-  @media (min-width: 768px) {
-    .choir-layout {
-      grid-template-columns: 1fr 1fr;
-    }
+  /* Pull quote */
+  .pull-quote-layout {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pull-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    line-height: 1.15;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin: 1.5rem 0 1.5rem;
+    font-style: normal;
+  }
+
+  .pull-quote-attr {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+    opacity: 0.7;
+    margin: 0;
   }
 </style>
