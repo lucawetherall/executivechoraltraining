@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import VideoEmbed from '../components/VideoEmbed.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -37,8 +38,8 @@ import VideoEmbed from '../components/VideoEmbed.astro';
     <div class="hero__body">
       <p class="hero__tagline">Choral conducting training that builds presence, communication, and trust — delivered by the Alma Consort, a professional London choir.</p>
       <div class="hero__ctas">
-        <a href="/contact/#booking" class="btn btn--primary hero__cta">Book a Session</a>
-        <a href="/what-we-do/" class="hero__cta-ghost">
+        <a href={base + 'contact/#booking'} class="btn btn--primary hero__cta">Book a Session</a>
+        <a href={base + 'what-we-do/'} class="hero__cta-ghost">
           See how it works
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -116,7 +117,7 @@ import VideoEmbed from '../components/VideoEmbed.astro';
       <div class="premise__right">
         <p class="premise__body">You stand in front of a professional choir. No slides, no scripts, no jargon. Just your hands, your breath, and your intent.</p>
         <p class="premise__body premise__body--muted">The music responds to your leadership in real time — honestly, immediately, and without compromise. A choir of voices that cannot lie.</p>
-        <a href="/what-we-do/" class="premise__link">
+        <a href={base + 'what-we-do/'} class="premise__link">
           Explore the method
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -220,7 +221,7 @@ import VideoEmbed from '../components/VideoEmbed.astro';
         <span class="featured__label">The Alma Consort</span>
         <h2 class="featured__heading">The instrument your leaders will conduct.</h2>
         <p class="featured__body">A professional London choir. Thirty voices trained to an orchestral standard. They have performed at the Barbican, the Wigmore Hall, and BBC Proms. When your leaders step onto the podium, they are conducting the real thing.</p>
-        <a href="/about/" class="featured__link">
+        <a href={base + 'about/'} class="featured__link">
           Learn about the ensemble
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -290,7 +291,7 @@ import VideoEmbed from '../components/VideoEmbed.astro';
           <span class="section-label">Insights</span>
           <h2 class="insights-heading">From the<br/>music stand.</h2>
         </div>
-        <a href="/insights/" class="insights-all">
+        <a href={base + 'insights/'} class="insights-all">
           All articles
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -299,21 +300,21 @@ import VideoEmbed from '../components/VideoEmbed.astro';
       </div>
 
       <div class="insights-grid">
-        <a href="/insights/what-conductors-know/" class="insight-card reveal">
+        <a href={base + 'insights/what-conductors-know/'} class="insight-card reveal">
           <span class="insight-card__tag">Leadership</span>
           <h3 class="insight-card__title">What conductors know about leadership that business schools don't</h3>
           <p class="insight-card__excerpt">The podium as a laboratory for executive presence, trust, and real-time feedback.</p>
           <span class="insight-card__arrow">→</span>
         </a>
 
-        <a href="/insights/science-of-singing/" class="insight-card reveal">
+        <a href={base + 'insights/science-of-singing/'} class="insight-card reveal">
           <span class="insight-card__tag">Wellbeing</span>
           <h3 class="insight-card__title">The science of singing: why group music-making rewires the team</h3>
           <p class="insight-card__excerpt">Oxytocin, cortisol, and the neurological case for bringing a choir into your leadership programme.</p>
           <span class="insight-card__arrow">→</span>
         </a>
 
-        <a href="/insights/team-away-day-choir/" class="insight-card reveal">
+        <a href={base + 'insights/team-away-day-choir/'} class="insight-card reveal">
           <span class="insight-card__tag">Away Days</span>
           <h3 class="insight-card__title">Why your next team away-day should end with a performance</h3>
           <p class="insight-card__excerpt">The case for shared creative risk as the antidote to formulaic corporate offsites.</p>
@@ -334,8 +335,8 @@ import VideoEmbed from '../components/VideoEmbed.astro';
         <p class="cta-close__body">Book a free thirty-minute consultation with our music director and experience the podium for yourself.</p>
       </div>
       <div class="cta-close__actions">
-        <a href="/contact/#booking" class="btn btn--primary">Book a Free Consultation</a>
-        <a href="/packages/" class="cta-close__ghost">View Packages →</a>
+        <a href={base + 'contact/#booking'} class="btn btn--primary">Book a Free Consultation</a>
+        <a href={base + 'packages/'} class="cta-close__ghost">View Packages →</a>
       </div>
     </div>
     <!-- Stave lines as background texture -->

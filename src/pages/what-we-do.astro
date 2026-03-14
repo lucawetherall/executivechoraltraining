@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -31,8 +32,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="wwd-hero__body">
       <p class="wwd-hero__tagline">Why conducting trains leaders better than talking about leadership.</p>
       <div class="wwd-hero__ctas">
-        <a href="/contact/#booking" class="btn btn--primary wwd-hero__cta">Book a Session</a>
-        <a href="/packages/" class="wwd-hero__cta-ghost">
+        <a href={base + 'contact/#booking'} class="btn btn--primary wwd-hero__cta">Book a Session</a>
+        <a href={base + 'packages/'} class="wwd-hero__cta-ghost">
           See the packages
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -61,7 +62,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="premise__body">Conducting is the only leadership discipline built entirely on non-verbal communication. A conductor cannot explain what they want while the music is happening. They must embody it — in posture, gesture, breathing, eye contact — and an ensemble of trained musicians will respond to the quality of that embodiment instantly.</p>
         <p class="premise__body premise__body--muted">This makes the conductor's podium the most honest feedback environment in any profession. If your gesture is ambiguous, the sound fractures. If your attention drifts, the ensemble loses cohesion. If you commit fully and communicate clearly, thirty voices align and the room fills with something unmistakable.</p>
         <p class="premise__body premise__body--muted">No debrief required. The music tells you exactly how you led.</p>
-        <a href="/packages/" class="premise__link">
+        <a href={base + 'packages/'} class="premise__link">
           Explore our packages
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -184,7 +185,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <article class="whom-card reveal">
           <h3 class="whom-card__title">Senior Leadership Teams</h3>
           <p class="whom-card__text">For boards, executive committees, and senior management teams. Conducting is an unusually effective way to surface communication dynamics in a small, high-stakes group. Best suited to our intensive multi-day programmes.</p>
-          <a href="/packages/" class="whom-card__link">
+          <a href={base + 'packages/'} class="whom-card__link">
             View packages
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -195,7 +196,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <article class="whom-card reveal">
           <h3 class="whom-card__title">Whole-Company Training Days</h3>
           <p class="whom-card__text">For organisations running annual training days, conferences, or team-building programmes. Our in-office taster sessions are designed to work within your existing schedule and venue. Scales from 20 to 200 participants.</p>
-          <a href="/packages/" class="whom-card__link">
+          <a href={base + 'packages/'} class="whom-card__link">
             View packages
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -206,7 +207,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <article class="whom-card reveal">
           <h3 class="whom-card__title">Executive Coaching Clients</h3>
           <p class="whom-card__text">For coaches seeking a distinctive experiential module for individual or small-group clients. A conducting session with a professional choir is unlike anything else in the executive development market.</p>
-          <a href="/packages/" class="whom-card__link">
+          <a href={base + 'packages/'} class="whom-card__link">
             View packages
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -228,8 +229,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="cta-close__body">Book a free thirty-minute consultation with our music director and experience the podium for yourself.</p>
       </div>
       <div class="cta-close__actions">
-        <a href="/contact/#booking" class="btn btn--primary">Book a Free Consultation</a>
-        <a href="/packages/" class="cta-close__ghost">View Packages →</a>
+        <a href={base + 'contact/#booking'} class="btn btn--primary">Book a Free Consultation</a>
+        <a href={base + 'packages/'} class="cta-close__ghost">View Packages →</a>
       </div>
     </div>
     <svg class="cta-close__stave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
