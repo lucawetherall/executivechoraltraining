@@ -32,31 +32,31 @@ const base = import.meta.env.BASE_URL;
           price="From £2,000"
           description="A half-day introduction to conducting as leadership development. Ideal for team-building days or conference breakout sessions. Includes ensemble warm-up, conducting basics, and a group rehearsal with the choir. The fastest way to find out what the podium reveals about your team."
           ctaText="Book Now"
-          ctaLink="/contact/#booking"
+          ctaLink={base + 'contact/#booking'}
         />
         <PackageCard
           title="Full Day"
           description="A comprehensive single-day programme. Morning: technique and fundamentals. Afternoon: ensemble leadership with the full choir. Closing: structured debrief connecting the experience to your team's working context. Suited to leadership away-days and dedicated development sessions."
           ctaText="Get a Quote"
-          ctaLink="/contact/?package=Full+Day"
+          ctaLink={base + 'contact/?package=Full+Day'}
         />
         <PackageCard
           title="Three-Day Programme"
           description="Intensive leadership development across three days. Day one builds the foundations. Day two introduces advanced conducting technique and ensemble management. Day three culminates in a performance and extended reflection. Designed for senior leadership teams who want depth, not novelty."
           ctaText="Get a Quote"
-          ctaLink="/contact/?package=Three-Day+Programme"
+          ctaLink={base + 'contact/?package=Three-Day+Programme'}
         />
         <PackageCard
           title="Week-Long Programme"
           description="The full executive conducting immersion. Progressive skill development across five days, building from fundamentals to advanced musicianship and ensemble direction. Concludes with a private performance for an invited audience. Our most intensive and rewarding offering."
           ctaText="Get a Quote"
-          ctaLink="/contact/?package=Week-Long+Programme"
+          ctaLink={base + 'contact/?package=Week-Long+Programme'}
         />
         <PackageCard
           title="Custom"
           description="Bespoke programmes designed around your organisation's specific objectives, team size, schedule, and ambition. We have delivered conducting workshops as conference keynote experiences, board retreat centrepieces, and graduate programme modules. Tell us what you need."
           ctaText="Get a Quote"
-          ctaLink="/contact/?package=Custom"
+          ctaLink={base + 'contact/?package=Custom'}
         />
       </div>
     </div>
@@ -86,7 +86,7 @@ const base = import.meta.env.BASE_URL;
     headline="Not sure where to start?"
     body="Book a free, no-obligation conducting consultation with our music director. In thirty minutes, you'll experience a taste of what the podium feels like — and we'll discuss which programme would suit your team best."
     buttonText="Book Your Free Consultation"
-    buttonLink="/contact/#booking"
+    buttonLink={base + 'contact/#booking'}
     variant="light"
   />
 </BaseLayout>
