@@ -3,175 +3,173 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="footer">
-  <div class="footer__top">
-    <div class="container">
-      <div class="footer__statement">
-        <span class="footer__logo">ECCT</span>
-        <p class="footer__tagline">Feel what leadership sounds like.</p>
-      </div>
+
+  <!-- Stave divider -->
+  <svg class="footer__stave" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="0" y1="20" x2="1440" y2="20" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+    <line x1="0" y1="28" x2="1440" y2="28" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+    <line x1="0" y1="36" x2="1440" y2="36" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+    <line x1="0" y1="44" x2="1440" y2="44" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+    <line x1="0" y1="52" x2="1440" y2="52" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+  </svg>
+
+  <!-- CTA block — Loud (ff) -->
+  <div class="footer__cta">
+    <span class="footer__mark">ff</span>
+    <h2 class="footer__heading">Let's<br/>Create.</h2>
+    <a href="mailto:hello@executivechoral.co.uk" class="footer__email">
+      hello@executivechoral.co.uk
+    </a>
+
+    <div class="footer__nav-links">
+      <a href="/what-we-do/">What We Do</a>
+      <a href="/packages/">Packages</a>
+      <a href="/about/">About</a>
+      <a href="/insights/">Insights</a>
+      <a href="/contact/">Contact</a>
     </div>
   </div>
 
-  <div class="footer__main">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <p>Executive Choral Conducting Training. Leadership development through the art of conducting — delivered by the Alma Consort, a professional London choir.</p>
-        </div>
+  <!-- Stave divider -->
+  <svg class="footer__stave" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="0" y1="20" x2="1440" y2="20" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+    <line x1="0" y1="28" x2="1440" y2="28" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+    <line x1="0" y1="36" x2="1440" y2="36" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+    <line x1="0" y1="44" x2="1440" y2="44" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+    <line x1="0" y1="52" x2="1440" y2="52" stroke="#b7c6c2" stroke-width="0.5" opacity="0.12"/>
+  </svg>
 
-        <div class="footer__nav">
-          <h4>Pages</h4>
-          <a href="/">Home</a>
-          <a href="/what-we-do/">What We Do</a>
-          <a href="/packages/">Packages</a>
-          <a href="/about/">About</a>
-          <a href="/insights/">Insights</a>
-          <a href="/contact/">Contact</a>
-        </div>
-
-        <div class="footer__contact">
-          <h4>Get in Touch</h4>
-          <a href="mailto:hello@executivechoral.co.uk">hello@executivechoral.co.uk</a>
-          <a href="tel:+442079460123">+44 20 7946 0123</a>
-          <a href="/contact/#booking" class="footer__cta">Book a Free Consultation →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <!-- Bottom bar — Whisper -->
   <div class="footer__bottom">
-    <div class="container">
-      <p>&copy; {year} Executive Choral Conducting Training. All rights reserved.</p>
+    <p>&copy; {year} Executive Choral Conducting Training</p>
+    <div class="footer__legal">
       <a href="/privacy/">Privacy Policy</a>
     </div>
   </div>
+
 </footer>
 
 <style>
   .footer {
-    background-color: var(--navy-deep);
-    color: rgba(255, 255, 255, 0.6);
-  }
-
-  /* Top bar with brand statement */
-  .footer__top {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    padding: 3.5rem 0;
-  }
-
-  .footer__statement {
-    display: flex;
-    align-items: baseline;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .footer__logo {
-    font-family: var(--font-serif);
-    font-size: 1.75rem;
-    font-weight: 700;
+    background-color: var(--navy);
     color: var(--white);
-    letter-spacing: 0.08em;
-    flex-shrink: 0;
   }
 
-  .footer__tagline {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.05rem;
-    color: var(--gold);
-    opacity: 0.8;
-    margin: 0;
-  }
-
-  /* Main content */
-  .footer__main {
-    padding: 4rem 0;
-  }
-
-  .footer__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .footer__brand p {
-    font-size: 0.9rem;
-    line-height: 1.75;
-    max-width: 340px;
-    margin: 0;
-  }
-
-  .footer__nav h4,
-  .footer__contact h4 {
-    color: rgba(255, 255, 255, 0.4);
-    font-family: var(--font-sans);
-    font-size: 0.65rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    margin-bottom: 1.25rem;
-  }
-
-  .footer__nav a,
-  .footer__contact a {
+  .footer__stave {
     display: block;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
-    margin-bottom: 0.625rem;
-    transition: color 0.2s ease;
+    width: 100%;
+    height: 64px;
   }
 
-  .footer__nav a:hover,
-  .footer__contact a:hover {
-    color: var(--white);
-  }
-
+  /* CTA block */
   .footer__cta {
-    display: inline-block !important;
-    color: var(--gold) !important;
-    margin-top: 0.5rem;
-    font-size: 0.85rem !important;
-    font-weight: 600;
-    letter-spacing: 0.03em;
+    padding: 5rem 6vw 5rem;
   }
 
-  .footer__cta:hover {
-    color: #e0bc6a !important;
+  .footer__mark {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    opacity: 0.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer__heading {
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 9rem, 9rem);
+    line-height: 0.88;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 2.5rem;
+  }
+
+  .footer__email {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: clamp(1.25rem, 2.5rem, 2.5rem);
+    font-weight: 300;
+    color: var(--sage);
+    text-decoration: none;
+    position: relative;
+    margin-bottom: 4rem;
+    padding-bottom: 2px;
+  }
+
+  .footer__email::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--sage);
+    transition: width 300ms var(--ease-out);
+  }
+
+  .footer__email:hover::after {
+    width: 100%;
+  }
+
+  .footer__nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer__nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    opacity: 0.5;
+    text-decoration: none;
+    transition: color 600ms var(--ease-out), opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+  }
+
+  .footer__nav-links a:hover {
+    color: var(--white);
+    opacity: 1;
+    transform: translateX(4px);
   }
 
   /* Bottom bar */
   .footer__bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-    padding: 1.5rem 0;
-  }
-
-  .footer__bottom .container {
+    padding: 1.5rem 6vw;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.08);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.35);
   }
 
+  .footer__bottom p,
   .footer__bottom a {
-    color: rgba(255, 255, 255, 0.35);
-    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    opacity: 0.5;
   }
 
   .footer__bottom a:hover {
-    color: rgba(255, 255, 255, 0.6);
+    opacity: 0.8;
+  }
+
+  .footer__legal {
+    display: flex;
+    gap: 1.5rem;
   }
 
   @media (min-width: 768px) {
-    .footer__grid {
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 3rem;
-    }
-
-    .footer__bottom .container {
+    .footer__bottom {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
   }
 </style>
