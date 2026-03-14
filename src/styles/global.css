@@ -2,9 +2,9 @@
 :root {
   /* Primary palette */
   --navy: #171e19;
-  --sage: #7ecfbf;
+  --sage: #A3344A;
   --white: #ffffff;
-  --taupe: #7a6765;
+  --taupe: #5e504e;
   --beige: #d7c5b2;
   --cyan: #d5f4f9;
   --soft-blue: #bbe2f5;
@@ -12,8 +12,8 @@
 
   /* Backward-compatibility aliases */
   --navy-deep: #171e19;
-  --gold: #7ecfbf;
-  --gold-faint: rgba(126, 207, 191, 0.1);
+  --gold: #A3344A;
+  --gold-faint: rgba(122, 31, 46, 0.1);
   --light-bg: #fafafa;
   --warm-white: #fafafa;
   --mid-grey: #7a6765;
@@ -49,7 +49,7 @@ html {
 body {
   font-family: var(--font-sans);
   font-size: 1.0625rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.65;
   color: var(--navy);
   background-color: var(--white);
@@ -192,7 +192,7 @@ p:last-child {
 
 .btn--primary {
   background-color: var(--sage);
-  color: var(--navy);
+  color: var(--white);
   border-color: var(--sage);
 }
 
@@ -253,7 +253,7 @@ p:last-child {
 }
 
 .page-header p {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.0625rem;
   max-width: 600px;
   line-height: 1.65;

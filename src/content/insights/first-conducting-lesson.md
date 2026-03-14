@@ -6,7 +6,7 @@ author: "ECCT"
 excerpt: "Stepping onto the conducting podium for the first time is unlike anything else in professional development. Here's what the experience actually teaches you."
 ---
 
-You have never conducted a choir before. You may never have sung in one. The idea of standing in front of thirty professional musicians and telling them what to do sounds somewhere between thrilling and terrifying.
+You have never conducted a choir before. You may never have sung in one. The idea of standing in front of a professional choir and telling them what to do sounds somewhere between thrilling and terrifying.
 
 Good. That is exactly the right starting point.
 
@@ -46,4 +46,4 @@ This is the hardest thing to learn, and it usually does not happen in a first le
 
 Your first conducting lesson will last perhaps thirty minutes. In that time, you will stand in front of a professional choir, give your first preparatory beat, hear your first chord, and make your first mistakes. You will learn more about how you communicate, hesitate, and commit than most people learn in a year of professional development.
 
-And you will want to do it again. That is the thing nobody tells you about conducting: it is addictive. The feeling of thirty voices responding to your gesture — locking together because you led them there — is unlike anything else. It is leadership made audible, and once you have heard it, you will not forget it.
+And you will want to do it again. That is the thing nobody tells you about conducting: it is addictive. The feeling of a whole choir responding to your gesture — locking together because you led them there — is unlike anything else. It is leadership made audible, and once you have heard it, you will not forget it.
