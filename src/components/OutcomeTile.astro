@@ -3,30 +3,50 @@ interface Props {
   heading: string;
   description: string;
   icon: string;
+  number?: string;
 }
 
-const { heading, description, icon } = Astro.props;
+const { heading, description, icon, number } = Astro.props;
 ---
 
 <div class="outcome-tile">
-  <div class="outcome-tile__icon" set:html={icon} />
+  <div class="outcome-tile__top">
+    {number && <span class="outcome-tile__num">{number}</span>}
+    <div class="outcome-tile__icon" set:html={icon} />
+  </div>
   <h3>{heading}</h3>
   <p>{description}</p>
 </div>
 
 <style>
   .outcome-tile {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    padding: 2.5rem 2.5rem 2.5rem 0;
+    border-top: 1px solid var(--border-subtle);
+    position: relative;
+  }
+
+  .outcome-tile__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .outcome-tile__num {
+    font-family: var(--font-serif);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    line-height: 1;
+    padding-top: 2px;
   }
 
   .outcome-tile__icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 1.25rem;
-    color: var(--gold);
+    width: 36px;
+    height: 36px;
+    color: rgba(27, 42, 74, 0.25);
+    flex-shrink: 0;
   }
 
   .outcome-tile__icon :global(svg) {
@@ -36,12 +56,15 @@ const { heading, description, icon } = Astro.props;
 
   .outcome-tile h3 {
     font-size: 1.2rem;
+    font-weight: 700;
     margin-bottom: 0.75rem;
+    line-height: 1.25;
   }
 
   .outcome-tile p {
     color: var(--mid-grey);
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 1.75;
+    margin: 0;
   }
 </style>

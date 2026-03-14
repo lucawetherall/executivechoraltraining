@@ -8,10 +8,10 @@ interface Props {
 const { title, description, link } = Astro.props;
 ---
 
-<a href={link} class="audience-card card">
+<a href={link} class="audience-card">
   <h3>{title}</h3>
   <p>{description}</p>
-  <span class="audience-card__arrow">&rarr;</span>
+  <span class="audience-card__link">Learn more &rarr;</span>
 </a>
 
 <style>
@@ -19,17 +19,21 @@ const { title, description, link } = Astro.props;
     display: block;
     text-decoration: none;
     color: inherit;
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-subtle);
+    transition: border-color 0.2s ease;
   }
 
   .audience-card:hover {
-    transform: translateY(-2px);
+    border-top-color: var(--gold);
     color: inherit;
   }
 
   .audience-card h3 {
+    font-size: 1.2rem;
     margin-bottom: 0.75rem;
     transition: color 0.2s ease;
+    line-height: 1.25;
   }
 
   .audience-card:hover h3 {
@@ -38,19 +42,22 @@ const { title, description, link } = Astro.props;
 
   .audience-card p {
     color: var(--mid-grey);
-    font-size: 0.95rem;
-    line-height: 1.7;
+    font-size: 0.93rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
   }
 
-  .audience-card__arrow {
-    display: inline-block;
-    margin-top: 1rem;
-    font-size: 1.25rem;
+  .audience-card__link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--navy);
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 1px;
+    transition: color 0.2s ease;
+  }
+
+  .audience-card:hover .audience-card__link {
     color: var(--gold);
-    transition: transform 0.2s ease;
-  }
-
-  .audience-card:hover .audience-card__arrow {
-    transform: translateX(4px);
   }
 </style>
