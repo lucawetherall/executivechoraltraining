@@ -2,9 +2,9 @@
 :root {
   /* Primary palette */
   --navy: #171e19;
-  --sage: #b7c6c2;
+  --sage: #7ecfbf;
   --white: #ffffff;
-  --taupe: #9f8d8b;
+  --taupe: #7a6765;
   --beige: #d7c5b2;
   --cyan: #d5f4f9;
   --soft-blue: #bbe2f5;
@@ -12,12 +12,12 @@
 
   /* Backward-compatibility aliases */
   --navy-deep: #171e19;
-  --gold: #b7c6c2;
-  --gold-faint: rgba(183, 198, 194, 0.1);
+  --gold: #7ecfbf;
+  --gold-faint: rgba(126, 207, 191, 0.1);
   --light-bg: #fafafa;
   --warm-white: #fafafa;
-  --mid-grey: #9f8d8b;
-  --border-subtle: rgba(23, 30, 25, 0.08);
+  --mid-grey: #7a6765;
+  --border-subtle: rgba(23, 30, 25, 0.12);
 
   /* Typography */
   --font-display: 'Anton', sans-serif;
@@ -144,7 +144,7 @@ p:last-child {
   font-size: 0.6875rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  opacity: 0.4;
+  opacity: 0.6;
   margin-bottom: 1.5rem;
 }
 
@@ -162,7 +162,6 @@ p:last-child {
 
 .section--navy .section-label {
   color: var(--sage);
-  opacity: 0.7;
 }
 
 /* ===== Gold Rule (compat) ===== */
@@ -206,7 +205,7 @@ p:last-child {
 .btn--secondary {
   background-color: transparent;
   color: var(--white);
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .btn--secondary:hover {
@@ -254,7 +253,7 @@ p:last-child {
 }
 
 .page-header p {
-  color: var(--taupe);
+  color: rgba(255, 255, 255, 0.82);
   font-size: 1.0625rem;
   max-width: 600px;
   line-height: 1.65;
