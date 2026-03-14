@@ -16,7 +16,7 @@ const base = import.meta.env.BASE_URL;
     <div class="wwd-hero__orb wwd-hero__orb--blue" aria-hidden="true"></div>
 
     <svg class="wwd-hero__arc" viewBox="0 0 1000 240" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none">
-      <path d="M 0 220 Q 500 20 1000 220" stroke="#b7c6c2" stroke-width="1" fill="none"/>
+      <path d="M 0 220 Q 500 20 1000 220" stroke="#7ecfbf" stroke-width="1" fill="none"/>
     </svg>
 
     <div class="wwd-hero__badge" aria-label="Page label">
@@ -234,11 +234,11 @@ const base = import.meta.env.BASE_URL;
       </div>
     </div>
     <svg class="cta-close__stave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-      <line x1="0" y1="30" x2="1440" y2="30" stroke="#b7c6c2" stroke-width="0.5" opacity="0.08"/>
-      <line x1="0" y1="50" x2="1440" y2="50" stroke="#b7c6c2" stroke-width="0.5" opacity="0.08"/>
-      <line x1="0" y1="70" x2="1440" y2="70" stroke="#b7c6c2" stroke-width="0.5" opacity="0.08"/>
-      <line x1="0" y1="90" x2="1440" y2="90" stroke="#b7c6c2" stroke-width="0.5" opacity="0.08"/>
-      <line x1="0" y1="110" x2="1440" y2="110" stroke="#b7c6c2" stroke-width="0.5" opacity="0.08"/>
+      <line x1="0" y1="30" x2="1440" y2="30" stroke="#7ecfbf" stroke-width="0.5" opacity="0.12"/>
+      <line x1="0" y1="50" x2="1440" y2="50" stroke="#7ecfbf" stroke-width="0.5" opacity="0.12"/>
+      <line x1="0" y1="70" x2="1440" y2="70" stroke="#7ecfbf" stroke-width="0.5" opacity="0.12"/>
+      <line x1="0" y1="90" x2="1440" y2="90" stroke="#7ecfbf" stroke-width="0.5" opacity="0.12"/>
+      <line x1="0" y1="110" x2="1440" y2="110" stroke="#7ecfbf" stroke-width="0.5" opacity="0.12"/>
     </svg>
   </section>
 
@@ -272,9 +272,9 @@ const base = import.meta.env.BASE_URL;
   }
 
   .wwd-hero__orb--sage {
-    background-color: #b7c6c2;
+    background-color: #7ecfbf;
     filter: blur(130px);
-    opacity: 0.12;
+    opacity: 0.15;
     top: 10%;
     left: -8%;
     animation-delay: 0s;
@@ -312,14 +312,14 @@ const base = import.meta.env.BASE_URL;
     align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 1rem;
-    border: 0.5px solid rgba(183, 198, 194, 0.3);
+    border: 0.5px solid rgba(126, 207, 191, 0.4);
     border-radius: 100px;
     font-family: var(--font-mono);
     font-size: 0.625rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--sage);
-    background: rgba(183, 198, 194, 0.06);
+    background: rgba(126, 207, 191, 0.08);
     backdrop-filter: blur(8px);
   }
 
@@ -355,7 +355,7 @@ const base = import.meta.env.BASE_URL;
   }
 
   .wwd-hero__line--outline {
-    -webkit-text-stroke: 1px #b7c6c2;
+    -webkit-text-stroke: 1px #7ecfbf;
     color: transparent;
   }
 
@@ -374,7 +374,7 @@ const base = import.meta.env.BASE_URL;
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.65;
-    color: var(--taupe);
+    color: rgba(255, 255, 255, 0.82);
     margin: 0;
   }
 
@@ -420,7 +420,7 @@ const base = import.meta.env.BASE_URL;
     justify-content: center;
     width: 40px;
     height: 40px;
-    border: 0.5px solid rgba(183, 198, 194, 0.3);
+    border: 0.5px solid rgba(126, 207, 191, 0.4);
     border-radius: 50%;
     color: var(--sage);
     animation: wwd-bounce 1.6s ease-in-out infinite;
@@ -428,7 +428,7 @@ const base = import.meta.env.BASE_URL;
   }
 
   .wwd-hero__scroll:hover {
-    background-color: rgba(183, 198, 194, 0.1);
+    background-color: rgba(126, 207, 191, 0.15);
   }
 
   @keyframes wwd-bounce {
@@ -530,7 +530,7 @@ const base = import.meta.env.BASE_URL;
     font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 300;
-    color: var(--taupe);
+    color: rgba(255, 255, 255, 0.82);
     max-width: 480px;
     margin-top: 1rem;
     line-height: 1.6;
@@ -547,12 +547,12 @@ const base = import.meta.env.BASE_URL;
     grid-template-columns: 3.5rem 1fr;
     gap: 2rem;
     padding: 2.5rem 0;
-    border-top: 0.5px solid rgba(183, 198, 194, 0.12);
+    border-top: 0.5px solid rgba(126, 207, 191, 0.18);
     align-items: start;
   }
 
   .session-step:last-child {
-    border-bottom: 0.5px solid rgba(183, 198, 194, 0.12);
+    border-bottom: 0.5px solid rgba(126, 207, 191, 0.18);
   }
 
   .session-step__num {
@@ -561,7 +561,7 @@ const base = import.meta.env.BASE_URL;
     line-height: 1;
     letter-spacing: -0.03em;
     color: var(--sage);
-    opacity: 0.5;
+    opacity: 0.75;
     padding-top: 0.15rem;
   }
 
@@ -581,7 +581,7 @@ const base = import.meta.env.BASE_URL;
     font-size: 0.9375rem;
     font-weight: 300;
     line-height: 1.7;
-    color: var(--taupe);
+    color: rgba(255, 255, 255, 0.82);
     margin: 0;
   }
 
@@ -653,7 +653,7 @@ const base = import.meta.env.BASE_URL;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--taupe);
-    opacity: 0.6;
+    opacity: 0.85;
   }
 
   .bento-card__body {
@@ -686,7 +686,7 @@ const base = import.meta.env.BASE_URL;
     display: inline-block;
     align-self: flex-start;
     padding: 0.25rem 0.75rem;
-    background-color: rgba(183, 198, 194, 0.15);
+    background-color: rgba(126, 207, 191, 0.15);
     font-family: var(--font-mono);
     font-size: 0.5625rem;
     letter-spacing: 0.16em;
@@ -769,7 +769,7 @@ const base = import.meta.env.BASE_URL;
     font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 300;
-    color: var(--taupe);
+    color: rgba(255, 255, 255, 0.82);
     max-width: 420px;
     margin-top: 1rem;
     line-height: 1.6;
@@ -782,8 +782,8 @@ const base = import.meta.env.BASE_URL;
   }
 
   .whom-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 0.5px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
@@ -792,8 +792,8 @@ const base = import.meta.env.BASE_URL;
   }
 
   .whom-card:hover {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(183, 198, 194, 0.2);
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(126, 207, 191, 0.3);
   }
 
   .whom-card__title {
@@ -811,7 +811,7 @@ const base = import.meta.env.BASE_URL;
     font-size: 0.9375rem;
     font-weight: 300;
     line-height: 1.65;
-    color: var(--taupe);
+    color: rgba(255, 255, 255, 0.82);
     flex: 1;
     margin: 0;
   }
@@ -873,7 +873,7 @@ const base = import.meta.env.BASE_URL;
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.7;
-    color: var(--taupe);
+    color: rgba(255, 255, 255, 0.82);
     max-width: 480px;
     margin-top: 0.5rem;
   }
@@ -891,7 +891,7 @@ const base = import.meta.env.BASE_URL;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--sage);
-    opacity: 0.6;
+    opacity: 0.85;
     text-decoration: none;
     transition: opacity 300ms ease;
   }
