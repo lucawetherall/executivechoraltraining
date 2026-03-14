@@ -1,5 +1,6 @@
 ---
 interface Props {
+  label?: string;
   headline: string;
   body: string;
   buttonText: string;
@@ -7,11 +8,12 @@ interface Props {
   variant?: 'navy' | 'light';
 }
 
-const { headline, body, buttonText, buttonLink, variant = 'navy' } = Astro.props;
+const { label, headline, body, buttonText, buttonLink, variant = 'navy' } = Astro.props;
 ---
 
 <section class:list={['cta-band', `cta-band--${variant}`]}>
   <div class="container text-center">
+    {label && <span class="section-label">{label}</span>}
     <h2>{headline}</h2>
     <p>{body}</p>
     <a href={buttonLink} class="btn btn--primary">{buttonText}</a>
@@ -20,12 +22,25 @@ const { headline, body, buttonText, buttonLink, variant = 'navy' } = Astro.props
 
 <style>
   .cta-band {
-    padding: 5rem 0;
+    padding: 6rem 0;
+    position: relative;
   }
 
   .cta-band--navy {
-    background-color: var(--navy);
+    background-color: var(--navy-deep);
     color: var(--white);
+  }
+
+  .cta-band--navy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5rem;
+    height: 2px;
+    background-color: var(--gold);
+    opacity: 0.6;
   }
 
   .cta-band--navy h2 {
@@ -33,17 +48,34 @@ const { headline, body, buttonText, buttonLink, variant = 'navy' } = Astro.props
   }
 
   .cta-band--light {
-    background-color: var(--light-bg);
+    background-color: var(--warm-white);
+  }
+
+  .cta-band--light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5rem;
+    height: 2px;
+    background-color: var(--gold);
+    opacity: 0.5;
   }
 
   .cta-band h2 {
     margin-bottom: 1.25rem;
+    margin-top: 0.75rem;
   }
 
   .cta-band p {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto 2.25rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .cta-band--navy p {
+    color: rgba(255, 255, 255, 0.7);
   }
 </style>

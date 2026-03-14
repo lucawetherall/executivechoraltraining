@@ -29,7 +29,7 @@ const navLinks = [
     </nav>
 
     <a href="/contact/#booking" class="btn btn--primary nav__cta">
-      Book Your Free Consultation
+      Book Free Consultation
     </a>
 
     <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -48,10 +48,22 @@ const navLinks = [
     right: 0;
     z-index: 1000;
     background-color: var(--white);
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid var(--border-subtle);
     height: var(--nav-height);
     display: flex;
     align-items: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .nav--scrolled {
+    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.07);
+  }
+
+  /* Transparent variant — used over hero */
+  .nav--transparent {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
   }
 
   .nav__inner {
@@ -68,34 +80,79 @@ const navLinks = [
 
   .nav__logo-text {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--navy);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
+    transition: color 0.3s ease;
+  }
+
+  .nav--transparent .nav__logo-text {
+    color: var(--white);
   }
 
   .nav__links {
     display: none;
-    gap: 2rem;
+    gap: 2.25rem;
   }
 
   .nav__link {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
+    letter-spacing: 0.02em;
     color: var(--navy);
     text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
     transition: color 0.2s ease;
   }
 
-  .nav__link:hover,
+  .nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--gold);
+    transition: width 0.2s ease;
+  }
+
+  .nav__link:hover {
+    color: var(--navy);
+  }
+
+  .nav__link:hover::after,
+  .nav__link--active::after {
+    width: 100%;
+  }
+
   .nav__link--active {
-    color: var(--gold);
+    color: var(--navy);
+  }
+
+  /* Transparent state — white links */
+  .nav--transparent .nav__link {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .nav--transparent .nav__link:hover {
+    color: var(--white);
+  }
+
+  .nav--transparent .nav__link--active {
+    color: var(--white);
+  }
+
+  .nav--transparent .nav__link::after {
+    background-color: var(--gold);
   }
 
   .nav__cta {
     display: none;
-    font-size: 0.85rem;
-    padding: 0.625rem 1.25rem;
+    font-size: 0.8rem;
+    padding: 0.55rem 1.125rem;
+    letter-spacing: 0.04em;
   }
 
   /* Hamburger */
@@ -113,14 +170,18 @@ const navLinks = [
 
   .nav__hamburger span {
     display: block;
-    width: 24px;
-    height: 2px;
+    width: 22px;
+    height: 1.5px;
     background-color: var(--navy);
     transition: all 0.3s ease;
   }
 
+  .nav--transparent .nav__hamburger span {
+    background-color: var(--white);
+  }
+
   .nav__hamburger[aria-expanded="true"] span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(4.5px, 4.5px);
   }
 
   .nav__hamburger[aria-expanded="true"] span:nth-child(2) {
@@ -128,7 +189,7 @@ const navLinks = [
   }
 
   .nav__hamburger[aria-expanded="true"] span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(4.5px, -4.5px);
   }
 
   /* Mobile menu */
@@ -141,13 +202,20 @@ const navLinks = [
     right: 0;
     bottom: 0;
     background-color: var(--white);
-    padding: 2rem 1.5rem;
-    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    gap: 0;
     z-index: 999;
   }
 
   .nav__links--open .nav__link {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--navy);
+  }
+
+  .nav__links--open .nav__link::after {
+    display: none;
   }
 
   @media (min-width: 1024px) {
@@ -168,10 +236,32 @@ const navLinks = [
 <script>
   const toggle = document.getElementById('nav-toggle');
   const links = document.getElementById('nav-links');
+  const nav = document.getElementById('nav');
 
+  // Mobile menu toggle
   toggle?.addEventListener('click', () => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!isOpen));
     links?.classList.toggle('nav__links--open');
   });
+
+  // Transparent nav over hero
+  const hero = document.querySelector('.hero');
+  if (hero && nav) {
+    nav.classList.add('nav--transparent');
+
+    const onScroll = () => {
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      if (heroBottom <= 80) {
+        nav.classList.remove('nav--transparent');
+        nav.classList.add('nav--scrolled');
+      } else {
+        nav.classList.add('nav--transparent');
+        nav.classList.remove('nav--scrolled');
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 </script>
