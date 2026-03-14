@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AudienceCard from '../components/AudienceCard.astro';
+---
+
+<BaseLayout
+  title="What We Do — Executive Choral Conducting Training"
+  description="Why conducting trains leaders better than talking about leadership. Discover our method: non-verbal communication, real-time feedback, and genuine team cohesion."
+>
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>The method.</h1>
+      <p>Why conducting trains leaders better than talking about leadership.</p>
+    </div>
+  </section>
+
+  <!-- Why Conducting? -->
+  <section class="section">
+    <div class="container">
+      <div class="prose">
+        <p>Conducting is the only leadership discipline built entirely on non-verbal communication. A conductor cannot explain what they want while the music is happening. They must embody it — in posture, gesture, breathing, eye contact — and an ensemble of trained musicians will respond to the quality of that embodiment instantly.</p>
+        <p>This makes the conductor's podium the most honest feedback environment in any profession. If your gesture is ambiguous, the sound fractures. If your attention drifts, the ensemble loses cohesion. If you commit fully and communicate clearly, thirty voices align and the room fills with something unmistakable.</p>
+        <p>No debrief required. The music tells you exactly how you led.</p>
+        <p>We bring this to your organisation. Your team members stand on the podium, work with our professional choir, and discover things about their leadership that no 360 review or personality assessment can surface.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Happens in a Session? -->
+  <section class="section section--light">
+    <div class="container">
+      <h2 class="text-center session-heading">What happens in a session?</h2>
+      <div class="prose">
+        <p>Every session follows the same arc, whether it lasts half a day or a week.</p>
+        <p><strong>Warm-up and orientation.</strong> Your team learns the basics of choral sound — breathing, pitch, vowel shape — by singing together. This is not a performance; it's a shared physical experience that levels the room. CEOs and graduate trainees start in the same place.</p>
+        <p><strong>Conducting fundamentals.</strong> We teach the essential gestures: the beat pattern, the preparatory breath, the cue, the cut-off. These are simple to learn and extraordinarily difficult to do well. Your team begins to understand what it takes to give a clear instruction when you can't use words.</p>
+        <p><strong>Rehearsal with the choir.</strong> Each participant conducts our professional choir — the Alma Consort — in a prepared piece of music. The choir responds to exactly what you give them, nothing more and nothing less. This is where the learning happens: in the gap between what you intended and what the ensemble actually did.</p>
+        <p><strong>Debrief and reflection.</strong> We close with structured discussion connecting the conducting experience to participants' working lives. What did the podium reveal about how you communicate? Where did you hesitate? When did the ensemble follow you most willingly, and why?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Your Team Will Learn -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center session-heading">What your team will learn</h2>
+      <div class="outcomes-list">
+        <div class="outcome-block">
+          <h3>Leadership & Communication</h3>
+          <p>How to give instructions that land first time. How to read a room while leading it. How to adjust in real time when your message isn't getting through. Conducting teaches all of this, and the feedback loop is measured in milliseconds, not quarterly reviews.</p>
+        </div>
+        <div class="outcome-block">
+          <h3>Team Cohesion & Trust</h3>
+          <p>Singing together synchronises breathing, heart rate, and attention. Your team will experience genuine mutual dependence — the kind that can't be manufactured by a trust fall or an escape room. The result is shared accomplishment, built on collective listening.</p>
+        </div>
+        <div class="outcome-block">
+          <h3>Presence & Confidence</h3>
+          <p>The podium strips away every crutch: no notes, no slides, no desk to stand behind. What remains is you, your body, and your willingness to be watched. Participants consistently report that conducting — even briefly, even badly — recalibrates their sense of what they're capable of in high-pressure situations.</p>
+        </div>
+        <div class="outcome-block">
+          <h3>Wellbeing & Stress Relief</h3>
+          <p>Group singing reduces cortisol, increases oxytocin, and improves self-reported mood. These are not soft claims — they are well-documented physiological effects. Your team will leave a session measurably less stressed than when they arrived.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For Whom? -->
+  <section class="section section--light">
+    <div class="container">
+      <h2 class="text-center session-heading">For whom?</h2>
+      <div class="grid-3">
+        <AudienceCard
+          title="Senior Leadership Teams"
+          description="For boards, executive committees, and senior management teams. Conducting is an unusually effective way to surface communication dynamics in a small, high-stakes group. Best suited to our intensive multi-day programmes."
+          link="/packages/#in-office"
+        />
+        <AudienceCard
+          title="Whole-Company Training Days"
+          description="For organisations running annual training days, conferences, or team-building programmes. Our in-office taster sessions are designed to work within your existing schedule and venue. Scales from 20 to 200 participants."
+          link="/packages/#in-office"
+        />
+        <AudienceCard
+          title="Executive Coaching Clients"
+          description="For coaches seeking a distinctive experiential module for individual or small-group clients. A conducting session with a professional choir is unlike anything else in the executive development market."
+          link="/packages/#in-office"
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .session-heading {
+    margin-bottom: 3rem;
+  }
+
+  .outcomes-list {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .outcome-block h3 {
+    margin-bottom: 0.75rem;
+    color: var(--gold);
+  }
+
+  .outcome-block p {
+    color: var(--mid-grey);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+</style>

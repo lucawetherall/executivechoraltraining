@@ -1,0 +1,59 @@
+---
+interface Props {
+  caption?: string;
+  placeholder?: boolean;
+}
+
+const { caption, placeholder = true } = Astro.props;
+---
+
+<div class="video-embed">
+  {placeholder ? (
+    <div class="video-embed__placeholder">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+        <polygon points="32,24 58,40 32,56" fill="currentColor" opacity="0.5"/>
+      </svg>
+      <p>Video placeholder — embed URL to be added</p>
+    </div>
+  ) : (
+    <slot />
+  )}
+  {caption && <p class="video-embed__caption">{caption}</p>}
+</div>
+
+<style>
+  .video-embed {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .video-embed__placeholder {
+    aspect-ratio: 16 / 9;
+    background-color: var(--navy);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .video-embed__placeholder svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .video-embed__placeholder p {
+    font-size: 0.9rem;
+  }
+
+  .video-embed__caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--mid-grey);
+    font-style: italic;
+    margin-top: 1rem;
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('insights')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout
+  title="Insights — Executive Choral Conducting Training"
+  description="Writing on leadership, music, and what happens when they meet. Articles and insights from ECCT."
+>
+  <section class="page-header">
+    <div class="container">
+      <h1>Insights.</h1>
+      <p>Writing on leadership, music, and what happens when they meet.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="insights-list">
+        {posts.map(post => (
+          <article class="insight-card">
+            <time datetime={post.data.date.toISOString()}>
+              {post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </time>
+            <h2><a href={`/insights/${post.id}/`}>{post.data.title}</a></h2>
+            <p>{post.data.excerpt}</p>
+            <a href={`/insights/${post.id}/`} class="insight-card__link">Read more &rarr;</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .insights-list {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .insight-card {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3rem;
+  }
+
+  .insight-card:last-child {
+    border-bottom: none;
+  }
+
+  .insight-card time {
+    font-size: 0.85rem;
+    color: var(--mid-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .insight-card h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  .insight-card h2 a {
+    color: var(--navy);
+    text-decoration: none;
+  }
+
+  .insight-card h2 a:hover {
+    color: var(--gold);
+  }
+
+  .insight-card p {
+    color: var(--mid-grey);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .insight-card__link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+</style>

@@ -1,0 +1,142 @@
+---
+const testimonials = [
+  {
+    quote: "We've run every kind of team-building exercise imaginable. This was the first time I saw our entire senior leadership team genuinely out of their comfort zone — and genuinely better for it.",
+    name: "[Name]",
+    title: "Head of People, [Company]"
+  },
+  {
+    quote: "I didn't expect to learn more about my communication style in two hours with a choir than I did in a year of executive coaching. The feedback from the music is instant and unambiguous.",
+    name: "[Name]",
+    title: "Managing Director, [Company]"
+  },
+  {
+    quote: "Our team still talks about it six months later. Not as a fun day — as a turning point in how we work together.",
+    name: "[Name]",
+    title: "L&D Manager, [Company]"
+  }
+];
+---
+
+<div class="testimonials">
+  <div class="testimonials__track" id="testimonial-track">
+    {testimonials.map((t, i) => (
+      <blockquote class:list={['testimonials__slide', { 'testimonials__slide--active': i === 0 }]} data-index={i}>
+        <p>&ldquo;{t.quote}&rdquo;</p>
+        <footer>
+          <strong>{t.name}</strong>
+          <span>{t.title}</span>
+        </footer>
+      </blockquote>
+    ))}
+  </div>
+  <div class="testimonials__dots">
+    {testimonials.map((_, i) => (
+      <button
+        class:list={['testimonials__dot', { 'testimonials__dot--active': i === 0 }]}
+        data-dot={i}
+        aria-label={`Show testimonial ${i + 1}`}
+      />
+    ))}
+  </div>
+</div>
+
+<style>
+  .testimonials {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .testimonials__track {
+    position: relative;
+    min-height: 200px;
+  }
+
+  .testimonials__slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .testimonials__slide--active {
+    opacity: 1;
+    position: relative;
+  }
+
+  .testimonials__slide p {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonials__slide footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .testimonials__slide footer strong {
+    font-size: 0.95rem;
+  }
+
+  .testimonials__slide footer span {
+    font-size: 0.85rem;
+    color: var(--mid-grey);
+  }
+
+  .testimonials__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .testimonials__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--navy);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s ease;
+  }
+
+  .testimonials__dot--active {
+    background: var(--navy);
+  }
+</style>
+
+<script>
+  const slides = document.querySelectorAll('.testimonials__slide');
+  const dots = document.querySelectorAll('.testimonials__dot');
+  let current = 0;
+
+  function show(index: number) {
+    slides.forEach(s => s.classList.remove('testimonials__slide--active'));
+    dots.forEach(d => d.classList.remove('testimonials__dot--active'));
+    slides[index]?.classList.add('testimonials__slide--active');
+    dots[index]?.classList.add('testimonials__dot--active');
+    current = index;
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const i = Number((dot as HTMLElement).dataset.dot);
+      show(i);
+    });
+  });
+
+  setInterval(() => {
+    show((current + 1) % slides.length);
+  }, 6000);
+</script>

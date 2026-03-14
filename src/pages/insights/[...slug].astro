@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('insights');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={`${post.data.title} — ECCT Insights`}
+  description={post.data.description}
+>
+  <section class="page-header">
+    <div class="container">
+      <p class="post-meta">
+        <a href="/insights/">&larr; Back to Insights</a>
+      </p>
+      <h1>{post.data.title}</h1>
+      <time datetime={post.data.date.toISOString()}>
+        {post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+      </time>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="prose post-content">
+        <Content />
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .post-meta a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-meta a:hover {
+    color: var(--gold);
+  }
+
+  .page-header time {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+  }
+
+  .post-content :global(h2) {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .post-content :global(h3) {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post-content :global(ul),
+  .post-content :global(ol) {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-content :global(ol) {
+    list-style: decimal;
+  }
+
+  .post-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-content :global(blockquote) {
+    border-left: 3px solid var(--gold);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--mid-grey);
+  }
+</style>

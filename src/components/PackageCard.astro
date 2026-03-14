@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string;
+  price?: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+}
+
+const { title, price, description, ctaText, ctaLink } = Astro.props;
+---
+
+<div class="package-card card">
+  <div class="package-card__header">
+    <h3>{title}</h3>
+    {price && <span class="package-card__price">{price}</span>}
+  </div>
+  <p class="package-card__desc">{description}</p>
+  <a href={ctaLink} class="btn btn--primary package-card__cta">{ctaText}</a>
+</div>
+
+<style>
+  .package-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .package-card__header {
+    margin-bottom: 1rem;
+  }
+
+  .package-card__header h3 {
+    margin-bottom: 0.25rem;
+  }
+
+  .package-card__price {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  .package-card__desc {
+    flex: 1;
+    color: var(--mid-grey);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .package-card__cta {
+    align-self: flex-start;
+  }
+</style>
