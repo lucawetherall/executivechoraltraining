@@ -49,6 +49,6 @@ These are not the results of a week-long retreat or a sustained coaching engagem
 
 ## Beyond the science
 
-Of course, numbers and neurochemicals only tell part of the story. What the science cannot capture is the experience itself: the moment when thirty voices lock together on a chord and the room vibrates with a sound that no individual could produce alone. That experience — of contributing to something larger than yourself, of listening so carefully that your breathing aligns with a stranger's — is what stays with teams long after the cortisol data has been forgotten.
+Of course, numbers and neurochemicals only tell part of the story. What the science cannot capture is the experience itself: the moment when the voices lock together on a chord and the room vibrates with a sound that no individual could produce alone. That experience — of contributing to something larger than yourself, of listening so carefully that your breathing aligns with a stranger's — is what stays with teams long after the cortisol data has been forgotten.
 
 The science gives us confidence that what we do works. The experience is what makes people come back.
