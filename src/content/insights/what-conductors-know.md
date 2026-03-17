@@ -2,7 +2,7 @@
 title: "What Conductors Know About Leadership That CEOs Don't"
 description: "Conducting is the only profession where leadership quality is audible in real time. Here's what the podium teaches that the boardroom can't."
 date: 2026-03-10
-author: "ECCT"
+author: "ECT"
 excerpt: "Conducting is the only profession where leadership quality is audible in real time. Here's what the podium teaches that the boardroom can't."
 ---
 

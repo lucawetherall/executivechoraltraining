@@ -7,7 +7,7 @@ const insights = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    author: z.string().default('ECCT'),
+    author: z.string().default('ECT'),
     excerpt: z.string(),
   }),
 });

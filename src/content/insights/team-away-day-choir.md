@@ -2,7 +2,7 @@
 title: "Why Your Next Team Away-Day Should Involve a Choir"
 description: "How conducting workshops compare with conventional team-building activities, and why L&D managers are choosing choral experiences."
 date: 2026-02-20
-author: "ECCT"
+author: "ECT"
 excerpt: "Escape rooms, cooking classes, and outdoor adventures have their place. But if you want genuine leadership development and team cohesion, a choir delivers what they cannot."
 ---
 
