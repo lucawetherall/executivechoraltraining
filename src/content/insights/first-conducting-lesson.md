@@ -2,7 +2,7 @@
 title: "5 Things You'll Learn in Your First Conducting Lesson"
 description: "What to expect when you step onto the podium for the first time. An accessible guide to your first conducting experience."
 date: 2026-02-28
-author: "ECCT"
+author: "ECT"
 excerpt: "Stepping onto the conducting podium for the first time is unlike anything else in professional development. Here's what the experience actually teaches you."
 ---
 

@@ -2,7 +2,7 @@
 title: "The Science of Singing Together: Why Choral Music Builds Better Teams"
 description: "Research-backed evidence on how group singing reduces stress, builds trust, and synchronises teams at a physiological level."
 date: 2026-03-05
-author: "ECCT"
+author: "ECT"
 excerpt: "Group singing doesn't just feel good — it changes your body chemistry. Here's the science behind why choral music builds stronger, more connected teams."
 ---
 
