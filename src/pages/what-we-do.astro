@@ -73,6 +73,54 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- ============================================================
+       FOR WHOM — charcoal bg, 3-card grid (dark t-card style)
+  ============================================================ -->
+  <section class="section whom-section" aria-label="Who it's for">
+    <div class="container">
+      <div class="whom-header">
+        <span class="dynamic-mark" style="color: var(--sage);">ff</span>
+        <h2 class="whom-heading">For Whom.</h2>
+        <p class="whom-sub">Three audiences who consistently find the podium transformative.</p>
+      </div>
+
+      <div class="whom-grid">
+        <article class="whom-card reveal">
+          <h3 class="whom-card__title">Senior Leadership Teams</h3>
+          <p class="whom-card__text">For boards, executive committees, and senior management teams. Conducting is an unusually effective way to surface communication dynamics in a small, high-stakes group. Best suited to our intensive multi-day programmes.</p>
+          <a href={base + 'packages/'} class="whom-card__link">
+            View packages
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </article>
+
+        <article class="whom-card reveal">
+          <h3 class="whom-card__title">Whole-Company Training Days</h3>
+          <p class="whom-card__text">For organisations running annual training days, conferences, or team-building programmes. Our in-office taster sessions are designed to work within your existing schedule and venue. Scales from 20 to 200 participants.</p>
+          <a href={base + 'packages/'} class="whom-card__link">
+            View packages
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </article>
+
+        <article class="whom-card reveal">
+          <h3 class="whom-card__title">Executive Coaching Clients</h3>
+          <p class="whom-card__text">For coaches seeking a distinctive experiential module for individual or small-group clients. A conducting session with a professional choir is unlike anything else in the executive development market.</p>
+          <a href={base + 'packages/'} class="whom-card__link">
+            View packages
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        SESSION STRUCTURE — charcoal bg, numbered timeline
   ============================================================ -->
   <section class="section session-section" aria-label="Session structure">
@@ -165,54 +213,6 @@ const base = import.meta.env.BASE_URL;
             <p class="bento-card__text">Group singing reduces cortisol, increases oxytocin, and improves self-reported mood. These are not soft claims — they are well-documented physiological effects. Your team will leave measurably less stressed than when they arrived.</p>
           </div>
           <div class="bento-card__tag">Wellbeing</div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FOR WHOM — charcoal bg, 3-card grid (dark t-card style)
-  ============================================================ -->
-  <section class="section whom-section" aria-label="Who it's for">
-    <div class="container">
-      <div class="whom-header">
-        <span class="dynamic-mark" style="color: var(--sage);">ff</span>
-        <h2 class="whom-heading">For Whom.</h2>
-        <p class="whom-sub">Three audiences who consistently find the podium transformative.</p>
-      </div>
-
-      <div class="whom-grid">
-        <article class="whom-card reveal">
-          <h3 class="whom-card__title">Senior Leadership Teams</h3>
-          <p class="whom-card__text">For boards, executive committees, and senior management teams. Conducting is an unusually effective way to surface communication dynamics in a small, high-stakes group. Best suited to our intensive multi-day programmes.</p>
-          <a href={base + 'packages/'} class="whom-card__link">
-            View packages
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </article>
-
-        <article class="whom-card reveal">
-          <h3 class="whom-card__title">Whole-Company Training Days</h3>
-          <p class="whom-card__text">For organisations running annual training days, conferences, or team-building programmes. Our in-office taster sessions are designed to work within your existing schedule and venue. Scales from 20 to 200 participants.</p>
-          <a href={base + 'packages/'} class="whom-card__link">
-            View packages
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </article>
-
-        <article class="whom-card reveal">
-          <h3 class="whom-card__title">Executive Coaching Clients</h3>
-          <p class="whom-card__text">For coaches seeking a distinctive experiential module for individual or small-group clients. A conducting session with a professional choir is unlike anything else in the executive development market.</p>
-          <a href={base + 'packages/'} class="whom-card__link">
-            View packages
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
         </article>
       </div>
     </div>
