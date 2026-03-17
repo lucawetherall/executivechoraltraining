@@ -16,7 +16,7 @@
   --gold-faint: rgba(122, 31, 46, 0.1);
   --light-bg: #fafafa;
   --warm-white: #fafafa;
-  --mid-grey: #7a6765;
+  --mid-grey: #4a3e3c;
   --border-subtle: rgba(23, 30, 25, 0.12);
 
   /* Typography */
@@ -114,7 +114,7 @@ p:last-child {
 }
 
 .section--light {
-  background-color: #fafafa;
+  background-color: #f0ede9;
 }
 
 .section--navy {
@@ -144,7 +144,7 @@ p:last-child {
   font-size: 0.6875rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  opacity: 0.6;
+  opacity: 0.82;
   margin-bottom: 1.5rem;
 }
 
