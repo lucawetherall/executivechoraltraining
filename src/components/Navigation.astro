@@ -1,7 +1,6 @@
 ---
 const base = import.meta.env.BASE_URL;
 const fullPath = Astro.url.pathname;
-// Strip base prefix so active-link comparison works on GitHub Pages (base: '/executivechoraltraining')
 const currentPath = base.length > 1
   ? fullPath.replace(base.endsWith('/') ? base.slice(0, -1) : base, '') || '/'
   : fullPath;
@@ -37,16 +36,16 @@ const navLinks = [
   </button>
 </header>
 
-<!-- Mobile menu overlay — outside nav so it doesn't inherit mix-blend-mode -->
+<!-- Mobile menu overlay -->
 <div class="nav__mobile-menu" id="mobile-menu" aria-hidden="true">
   <nav aria-label="Mobile navigation">
-    <a href={base} class="nav__mobile-link">Home</a>
-    {navLinks.map(link => (
-      <a href={base + link.href.slice(1)} class="nav__mobile-link">{link.label}</a>
+    <a href={base} class="nav__mobile-link" style="--i:0">Home</a>
+    {navLinks.map((link, i) => (
+      <a href={base + link.href.slice(1)} class="nav__mobile-link" style={`--i:${i + 1}`}>{link.label}</a>
     ))}
-    <a href={base + 'contact/'} class="nav__mobile-link">Contact</a>
+    <a href={base + 'contact/'} class="nav__mobile-link" style="--i:5">Contact</a>
   </nav>
-  <a href={base + 'contact/#booking'} class="nav__mobile-cta">Book a Session →</a>
+  <a href={base + 'contact/#booking'} class="nav__mobile-cta" style="--i:6">Book a Session →</a>
 </div>
 
 <style>
@@ -68,14 +67,13 @@ const navLinks = [
 
   .nav[data-scrolled="true"] {
     mix-blend-mode: normal;
-    background: rgba(23, 30, 25, 0.92);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(23, 30, 25, 0.94);
+    backdrop-filter: blur(20px) saturate(1.2);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
     padding: 16px 48px;
-    border-bottom: 0.5px solid rgba(122, 31, 46, 0.15);
+    border-bottom: 1px solid rgba(163, 52, 74, 0.1);
   }
 
-  /* Re-enable pointer events on interactive children */
   .nav > * {
     pointer-events: auto;
   }
@@ -88,6 +86,11 @@ const navLinks = [
     color: var(--white);
     text-decoration: none;
     line-height: 1;
+    transition: opacity 300ms ease;
+  }
+
+  .nav__logo:hover {
+    opacity: 0.7;
   }
 
   .nav__links {
@@ -105,9 +108,29 @@ const navLinks = [
     color: var(--white);
     text-decoration: none;
     transition: opacity 300ms ease;
+    position: relative;
   }
 
-  .nav__link:hover,
+  .nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--sage);
+    transition: width 400ms var(--ease-out);
+  }
+
+  .nav__link:hover::after,
+  .nav__link--active::after {
+    width: 100%;
+  }
+
+  .nav__link:hover {
+    opacity: 0.8;
+  }
+
   .nav__link--active {
     opacity: 0.6;
   }
@@ -133,9 +156,10 @@ const navLinks = [
   .nav__hamburger span {
     display: block;
     width: 22px;
-    height: 0.5px;
+    height: 1px;
     background-color: var(--white);
-    transition: all 300ms ease;
+    transition: all 400ms var(--ease-out);
+    transform-origin: center;
   }
 
   .nav__hamburger[aria-expanded="true"] span:nth-child(1) {
@@ -144,6 +168,7 @@ const navLinks = [
 
   .nav__hamburger[aria-expanded="true"] span:nth-child(2) {
     opacity: 0;
+    transform: scaleX(0);
   }
 
   .nav__hamburger[aria-expanded="true"] span:nth-child(3) {
@@ -159,10 +184,10 @@ const navLinks = [
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 6rem 2rem 4rem;
+    padding: 6rem 2.5rem 4rem;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 400ms var(--ease-out);
+    transition: opacity 500ms var(--ease-out);
   }
 
   .nav__mobile-menu.open {
@@ -170,17 +195,31 @@ const navLinks = [
     pointer-events: auto;
   }
 
+  /* Staggered link animations */
+  .nav__mobile-link,
+  .nav__mobile-cta {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out), color 300ms ease;
+  }
+
+  .nav__mobile-menu.open .nav__mobile-link,
+  .nav__mobile-menu.open .nav__mobile-cta {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--i) * 70ms + 150ms);
+  }
+
   .nav__mobile-link {
     display: block;
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: var(--white);
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     line-height: 1;
-    border-bottom: 0.5px solid rgba(122, 31, 46, 0.2);
-    transition: color 300ms ease;
+    border-bottom: 1px solid rgba(163, 52, 74, 0.12);
   }
 
   .nav__mobile-link:hover {
@@ -192,6 +231,7 @@ const navLinks = [
     margin-top: 2.5rem;
     font-family: var(--font-mono);
     font-size: 0.6875rem;
+    font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--sage);
@@ -219,7 +259,6 @@ const navLinks = [
 </style>
 
 <script>
-  // Scroll-aware nav
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav?.setAttribute('data-scrolled', window.scrollY > 60 ? 'true' : 'false');
@@ -236,7 +275,6 @@ const navLinks = [
     mobileMenu?.setAttribute('aria-hidden', String(!opening));
   });
 
-  // Close mobile menu on link click
   mobileMenu?.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       toggle?.setAttribute('aria-expanded', 'false');

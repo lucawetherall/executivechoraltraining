@@ -127,8 +127,18 @@ const base = import.meta.env.BASE_URL;
   }
 
   .church-section {
-    background: linear-gradient(135deg, #2a1f14 0%, #1B2A4A 100%);
+    background: linear-gradient(135deg, #1a1510 0%, #171e19 50%, #1a1520 100%);
     color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .church-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 30%, rgba(163, 52, 74, 0.06) 0%, transparent 60%);
+    pointer-events: none;
   }
 
   .church-section h2 {

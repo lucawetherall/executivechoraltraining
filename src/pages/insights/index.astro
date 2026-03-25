@@ -14,6 +14,7 @@ const posts = (await getCollection('insights')).sort(
 >
   <section class="page-header">
     <div class="container">
+      <span class="section-label">Writing</span>
       <h1>Insights.</h1>
       <p>Writing on leadership, music, and what happens when they meet.</p>
     </div>
@@ -23,13 +24,18 @@ const posts = (await getCollection('insights')).sort(
     <div class="container">
       <div class="insights-list">
         {posts.map(post => (
-          <article class="insight-card">
+          <article class="insight-card reveal">
             <time datetime={post.data.date.toISOString()}>
               {post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
             </time>
             <h2><a href={base + 'insights/' + post.id + '/'}>{post.data.title}</a></h2>
             <p>{post.data.excerpt}</p>
-            <a href={base + 'insights/' + post.id + '/'} class="insight-card__link">Read more &rarr;</a>
+            <a href={base + 'insights/' + post.id + '/'} class="insight-card__link">
+              Read more
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
           </article>
         ))}
       </div>
@@ -43,12 +49,16 @@ const posts = (await getCollection('insights')).sort(
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 0;
   }
 
   .insight-card {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(23, 30, 25, 0.08);
+    padding: 3rem 0;
+  }
+
+  .insight-card:first-child {
+    padding-top: 0;
   }
 
   .insight-card:last-child {
@@ -56,36 +66,51 @@ const posts = (await getCollection('insights')).sort(
   }
 
   .insight-card time {
-    font-size: 0.85rem;
-    color: var(--mid-grey);
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: var(--taupe);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
   }
 
   .insight-card h2 {
     font-size: 1.5rem;
-    margin: 0.5rem 0 0.75rem;
+    margin: 0.75rem 0 0.75rem;
+    line-height: 1.05;
   }
 
   .insight-card h2 a {
     color: var(--navy);
     text-decoration: none;
+    transition: color 300ms ease;
   }
 
   .insight-card h2 a:hover {
-    color: var(--gold);
+    color: var(--sage);
   }
 
   .insight-card p {
-    color: var(--mid-grey);
+    color: var(--taupe);
     font-size: 1rem;
     line-height: 1.7;
+    font-weight: 300;
   }
 
   .insight-card__link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     margin-top: 0.75rem;
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--navy);
+    transition: gap 300ms ease, color 300ms ease;
+  }
+
+  .insight-card__link:hover {
+    gap: 0.75rem;
+    color: var(--sage);
   }
 </style>
