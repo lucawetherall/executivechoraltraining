@@ -10,32 +10,33 @@ const base = import.meta.env.BASE_URL;
 >
 
   <!-- ============================================================
-       HERO — Lamoon-style: centered badge + split headline + dual CTAs
+       HERO
   ============================================================ -->
   <section class="hero" aria-label="Hero">
     <!-- Background ambient orbs -->
     <div class="hero__orb hero__orb--sage" aria-hidden="true"></div>
     <div class="hero__orb hero__orb--blue" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--gold" aria-hidden="true"></div>
 
     <!-- Conducting arc SVG -->
     <svg class="hero__arc" viewBox="0 0 1000 240" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none">
-      <path d="M 0 220 Q 500 20 1000 220" stroke="#A3344A" stroke-width="1" fill="none"/>
+      <path d="M 0 220 Q 500 20 1000 220" stroke="#A3344A" stroke-width="0.5" fill="none" />
     </svg>
 
     <!-- Badge pill -->
-    <div class="hero__badge" aria-label="Tagline badge">
+    <div class="hero__badge hero__animate hero__animate--1" aria-label="Tagline badge">
       <span class="hero__badge-dot" aria-hidden="true"></span>
       <span>Where Leaders Find Their Voice</span>
     </div>
 
     <!-- Main headline -->
     <div class="hero__headline" aria-label="Site headline">
-      <p class="hero__line hero__line--solid">TEACH YOUR</p>
-      <p class="hero__line hero__line--outline">LEADERS.</p>
+      <p class="hero__line hero__line--solid hero__animate hero__animate--2">TEACH YOUR</p>
+      <p class="hero__line hero__line--outline hero__animate hero__animate--3">LEADERS.</p>
     </div>
 
     <!-- Subtext + CTAs -->
-    <div class="hero__body">
+    <div class="hero__body hero__animate hero__animate--4">
       <p class="hero__tagline">Choral conducting training that builds presence, communication, and trust — delivered by the Alma Consort, a professional London choir.</p>
       <div class="hero__ctas">
         <a href={base + 'contact/#booking'} class="btn btn--primary hero__cta">Book a Session</a>
@@ -49,7 +50,7 @@ const base = import.meta.env.BASE_URL;
     </div>
 
     <!-- Scroll indicator -->
-    <a href="#trust" class="hero__scroll" aria-label="Scroll down">
+    <a href="#trust" class="hero__scroll hero__animate hero__animate--5" aria-label="Scroll down">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" width="18" height="18">
         <path d="M12 5v14M5 12l7 7 7-7"/>
       </svg>
@@ -57,50 +58,50 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- ============================================================
-       TRUST TICKER — marquee of credentials
+       TRUST TICKER
   ============================================================ -->
   <section class="trust-strip" id="trust" aria-label="Credentials">
     <div class="trust-strip__track" aria-hidden="true">
       <div class="trust-strip__items">
         <span>FTSE 100 Teams</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>The Barbican</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>Wigmore Hall</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>BBC Proms</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>Senior Leadership Away-Days</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>Conference Keynotes</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>Board Retreats</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>Graduate Programmes</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <!-- Duplicate for seamless loop -->
         <span>FTSE 100 Teams</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>The Barbican</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>Wigmore Hall</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>BBC Proms</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>Senior Leadership Away-Days</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>Conference Keynotes</span>
-        <span class="trust-strip__sep">·</span>
-        <span>Board Boards</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
+        <span>Board Retreats</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
         <span>Graduate Programmes</span>
-        <span class="trust-strip__sep">·</span>
+        <span class="trust-strip__sep" aria-hidden="true"></span>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       PREMISE — pp: quiet, editorial
+       PREMISE
   ============================================================ -->
   <section class="section premise-section">
     <div class="container premise-grid">
@@ -122,27 +123,27 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- ============================================================
-       STATS ROW — 3 key numbers
+       STATS ROW
   ============================================================ -->
   <section class="stats-section" aria-label="Key statistics">
     <div class="container stats-grid">
       <div class="stat-item reveal">
-        <span class="stat-item__num">6</span>
+        <span class="stat-item__num" data-count="6">0</span>
         <span class="stat-item__label">professional singers in the room — enough to make the experience real</span>
       </div>
       <div class="stat-item reveal">
-        <span class="stat-item__num">4</span>
+        <span class="stat-item__num" data-count="4">0</span>
         <span class="stat-item__label">ways to experience it — from a taster to a full week</span>
       </div>
       <div class="stat-item reveal">
-        <span class="stat-item__num">2h</span>
+        <span class="stat-item__num" data-suffix="h" data-count="2">0</span>
         <span class="stat-item__label">is all it takes to change how you think about leadership</span>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       OUTCOMES BENTO — mp: features in a bento grid
+       OUTCOMES BENTO
   ============================================================ -->
   <section class="section outcomes-section">
     <div class="container">
@@ -153,7 +154,6 @@ const base = import.meta.env.BASE_URL;
       </div>
 
       <div class="bento-grid">
-        <!-- Large card -->
         <article class="bento-card bento-card--large reveal">
           <span class="bento-card__num">01</span>
           <div class="bento-card__body">
@@ -163,7 +163,6 @@ const base = import.meta.env.BASE_URL;
           <div class="bento-card__tag">Core Skill</div>
         </article>
 
-        <!-- Medium card -->
         <article class="bento-card bento-card--medium reveal">
           <span class="bento-card__num">02</span>
           <div class="bento-card__body">
@@ -173,7 +172,6 @@ const base = import.meta.env.BASE_URL;
           <div class="bento-card__tag">Team</div>
         </article>
 
-        <!-- Small card -->
         <article class="bento-card bento-card--small reveal">
           <span class="bento-card__num">03</span>
           <div class="bento-card__body">
@@ -183,7 +181,6 @@ const base = import.meta.env.BASE_URL;
           <div class="bento-card__tag">Presence</div>
         </article>
 
-        <!-- Small card -->
         <article class="bento-card bento-card--small reveal">
           <span class="bento-card__num">04</span>
           <div class="bento-card__body">
@@ -197,11 +194,10 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- ============================================================
-       FEATURED ENSEMBLE — mf: asymmetric video + text (navy bg)
+       FEATURED ENSEMBLE
   ============================================================ -->
   <section class="section featured-section">
     <div class="featured-grid container">
-      <!-- Left: image with offset accent -->
       <div class="featured__image-wrap reveal">
         <div class="featured__image-offset" aria-hidden="true"></div>
         <div class="featured__image-box">
@@ -209,7 +205,6 @@ const base = import.meta.env.BASE_URL;
         </div>
       </div>
 
-      <!-- Right: editorial text -->
       <div class="featured__text">
         <span class="dynamic-mark" style="color: var(--sage);">mf</span>
         <span class="featured__label">The Alma Consort</span>
@@ -226,7 +221,7 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- ============================================================
-       TESTIMONIALS — ff: 3-card grid
+       TESTIMONIALS
   ============================================================ -->
   <section class="section testimonials-section" aria-label="Client testimonials">
     <div class="container">
@@ -237,7 +232,7 @@ const base = import.meta.env.BASE_URL;
 
       <div class="testimonials-grid">
         <blockquote class="t-card reveal">
-          <div class="t-card__quote-mark" aria-hidden="true">&ldquo;</div>
+          <div class="t-card__accent" aria-hidden="true"></div>
           <p class="t-card__text">We've run every kind of team-building exercise imaginable. This was the first time I saw our entire senior leadership team genuinely out of their comfort zone — and genuinely better for it.</p>
           <footer class="t-card__footer">
             <div class="t-card__avatar" aria-hidden="true">HP</div>
@@ -249,7 +244,7 @@ const base = import.meta.env.BASE_URL;
         </blockquote>
 
         <blockquote class="t-card reveal">
-          <div class="t-card__quote-mark" aria-hidden="true">&ldquo;</div>
+          <div class="t-card__accent" aria-hidden="true"></div>
           <p class="t-card__text">I didn't expect to learn more about my communication style in two hours with a choir than I did in a year of executive coaching. The feedback from the music is instant and unambiguous.</p>
           <footer class="t-card__footer">
             <div class="t-card__avatar" aria-hidden="true">MD</div>
@@ -261,7 +256,7 @@ const base = import.meta.env.BASE_URL;
         </blockquote>
 
         <blockquote class="t-card reveal">
-          <div class="t-card__quote-mark" aria-hidden="true">&ldquo;</div>
+          <div class="t-card__accent" aria-hidden="true"></div>
           <p class="t-card__text">Our team still talks about it six months later. Not as a fun day — as a turning point in how we work together.</p>
           <footer class="t-card__footer">
             <div class="t-card__avatar" aria-hidden="true">LM</div>
@@ -276,7 +271,7 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- ============================================================
-       INSIGHTS PREVIEW — editorial blog grid
+       INSIGHTS PREVIEW
   ============================================================ -->
   <section class="section insights-section">
     <div class="container">
@@ -298,28 +293,40 @@ const base = import.meta.env.BASE_URL;
           <span class="insight-card__tag">Leadership</span>
           <h3 class="insight-card__title">What conductors know about leadership that business schools don't</h3>
           <p class="insight-card__excerpt">The podium as a laboratory for executive presence, trust, and real-time feedback.</p>
-          <span class="insight-card__arrow">→</span>
+          <span class="insight-card__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </span>
         </a>
 
         <a href={base + 'insights/science-of-singing/'} class="insight-card reveal">
           <span class="insight-card__tag">Wellbeing</span>
           <h3 class="insight-card__title">The science of singing: why group music-making rewires the team</h3>
           <p class="insight-card__excerpt">Oxytocin, cortisol, and the neurological case for bringing a choir into your leadership programme.</p>
-          <span class="insight-card__arrow">→</span>
+          <span class="insight-card__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </span>
         </a>
 
         <a href={base + 'insights/team-away-day-choir/'} class="insight-card reveal">
           <span class="insight-card__tag">Away Days</span>
           <h3 class="insight-card__title">Why your next team away-day should end with a performance</h3>
           <p class="insight-card__excerpt">The case for shared creative risk as the antidote to formulaic corporate offsites.</p>
-          <span class="insight-card__arrow">→</span>
+          <span class="insight-card__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       CTA BAND — bold navy closing section
+       CTA BAND
   ============================================================ -->
   <section class="cta-close" aria-label="Call to action">
     <div class="cta-close__inner container">
@@ -333,17 +340,52 @@ const base = import.meta.env.BASE_URL;
         <a href={base + 'packages/'} class="cta-close__ghost">View Packages →</a>
       </div>
     </div>
-    <!-- Stave lines as background texture -->
     <svg class="cta-close__stave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-      <line x1="0" y1="30" x2="1440" y2="30" stroke="#A3344A" stroke-width="0.5" opacity="0.12"/>
-      <line x1="0" y1="50" x2="1440" y2="50" stroke="#A3344A" stroke-width="0.5" opacity="0.12"/>
-      <line x1="0" y1="70" x2="1440" y2="70" stroke="#A3344A" stroke-width="0.5" opacity="0.12"/>
-      <line x1="0" y1="90" x2="1440" y2="90" stroke="#A3344A" stroke-width="0.5" opacity="0.12"/>
-      <line x1="0" y1="110" x2="1440" y2="110" stroke="#A3344A" stroke-width="0.5" opacity="0.12"/>
+      <line x1="0" y1="30" x2="1440" y2="30" stroke="#A3344A" stroke-width="0.5" opacity="0.08"/>
+      <line x1="0" y1="50" x2="1440" y2="50" stroke="#A3344A" stroke-width="0.5" opacity="0.08"/>
+      <line x1="0" y1="70" x2="1440" y2="70" stroke="#A3344A" stroke-width="0.5" opacity="0.08"/>
+      <line x1="0" y1="90" x2="1440" y2="90" stroke="#A3344A" stroke-width="0.5" opacity="0.08"/>
+      <line x1="0" y1="110" x2="1440" y2="110" stroke="#A3344A" stroke-width="0.5" opacity="0.08"/>
     </svg>
   </section>
 
 </BaseLayout>
+
+<!-- ============================================================
+     Stats counter animation
+============================================================ -->
+<script>
+  // Animated counter for stat numbers
+  const counters = document.querySelectorAll('[data-count]');
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          const target = parseInt(el.dataset.count || '0');
+          const suffix = el.dataset.suffix || '';
+          let current = 0;
+          const duration = 1200;
+          const start = performance.now();
+
+          function step(now: number) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease-out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            current = Math.round(eased * target);
+            el.textContent = current + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+          counterObserver.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  counters.forEach(el => counterObserver.observe(el));
+</script>
 
 <style>
   /* ============================================================
@@ -363,36 +405,86 @@ const base = import.meta.env.BASE_URL;
     gap: 2rem;
   }
 
+  /* Radial gradient backdrop */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140%;
+    height: 140%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse at 50% 40%, rgba(163, 52, 74, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Staggered entrance animations */
+  .hero__animate {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: heroFadeIn 900ms var(--ease-out) forwards;
+  }
+
+  .hero__animate--1 { animation-delay: 200ms; }
+  .hero__animate--2 { animation-delay: 400ms; }
+  .hero__animate--3 { animation-delay: 550ms; }
+  .hero__animate--4 { animation-delay: 750ms; }
+  .hero__animate--5 { animation-delay: 1100ms; }
+
+  @keyframes heroFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .hero__orb {
     position: absolute;
-    width: 400px;
-    height: 400px;
     border-radius: 50%;
     pointer-events: none;
-    animation: float 8s ease-in-out infinite;
+    animation: float 10s ease-in-out infinite;
   }
 
   .hero__orb--sage {
+    width: 500px;
+    height: 500px;
     background-color: #A3344A;
-    filter: blur(130px);
-    opacity: 0.15;
-    top: 10%;
-    left: -8%;
+    filter: blur(150px);
+    opacity: 0.12;
+    top: 5%;
+    left: -12%;
     animation-delay: 0s;
   }
 
   .hero__orb--blue {
+    width: 400px;
+    height: 400px;
     background-color: #bbe2f5;
-    filter: blur(130px);
-    opacity: 0.12;
-    bottom: 15%;
-    right: -6%;
-    animation-delay: 4s;
+    filter: blur(140px);
+    opacity: 0.08;
+    bottom: 10%;
+    right: -8%;
+    animation-delay: 3s;
+  }
+
+  .hero__orb--gold {
+    width: 300px;
+    height: 300px;
+    background-color: #B8973A;
+    filter: blur(120px);
+    opacity: 0.05;
+    top: 60%;
+    left: 60%;
+    animation-delay: 6s;
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-24px); }
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
   }
 
   .hero__arc {
@@ -402,7 +494,7 @@ const base = import.meta.env.BASE_URL;
     right: 0;
     width: 100%;
     height: auto;
-    opacity: 0.18;
+    opacity: 0.15;
     pointer-events: none;
   }
 
@@ -413,16 +505,17 @@ const base = import.meta.env.BASE_URL;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.4rem 1rem;
-    border: 0.5px solid rgba(122, 31, 46, 0.4);
+    padding: 0.4rem 1.2rem;
+    border: 1px solid rgba(163, 52, 74, 0.3);
     border-radius: 100px;
     font-family: var(--font-mono);
     font-size: 0.625rem;
+    font-weight: 400;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--sage);
-    background: rgba(122, 31, 46, 0.08);
-    backdrop-filter: blur(8px);
+    background: rgba(163, 52, 74, 0.06);
+    backdrop-filter: blur(12px);
   }
 
   .hero__badge-dot {
@@ -430,12 +523,12 @@ const base = import.meta.env.BASE_URL;
     height: 6px;
     border-radius: 50%;
     background-color: var(--sage);
-    animation: pulse 2s ease-in-out infinite;
+    animation: pulse 2.5s ease-in-out infinite;
   }
 
   @keyframes pulse {
     0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.8); }
+    50% { opacity: 0.4; transform: scale(0.75); }
   }
 
   /* Headline */
@@ -478,7 +571,7 @@ const base = import.meta.env.BASE_URL;
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.65;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.85);
     margin: 0;
   }
 
@@ -491,7 +584,7 @@ const base = import.meta.env.BASE_URL;
   }
 
   .hero__cta {
-    padding: 12px 28px;
+    padding: 14px 32px;
     font-size: 0.75rem;
     letter-spacing: 0.16em;
   }
@@ -510,40 +603,7 @@ const base = import.meta.env.BASE_URL;
 
   .hero__cta-ghost:hover {
     gap: 0.75rem;
-    opacity: 0.8;
-  }
-
-  /* Floating stat card */
-  .hero__stat-card {
-    position: absolute;
-    bottom: 5rem;
-    right: 6vw;
-    z-index: 2;
-    padding: 1.25rem 1.75rem;
-    background: rgba(122, 31, 46, 0.1);
-    border: 0.5px solid rgba(122, 31, 46, 0.3);
-    backdrop-filter: blur(12px);
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    text-align: left;
-  }
-
-  .hero__stat-num {
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--white);
-  }
-
-  .hero__stat-label {
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 300;
-    line-height: 1.4;
-    color: var(--sage);
+    opacity: 0.75;
   }
 
   /* Scroll indicator */
@@ -556,28 +616,23 @@ const base = import.meta.env.BASE_URL;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 0.5px solid rgba(122, 31, 46, 0.4);
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(163, 52, 74, 0.3);
     border-radius: 50%;
     color: var(--sage);
-    animation: bounce 1.6s ease-in-out infinite;
-    transition: background-color 300ms ease;
+    animation: bounce 2s ease-in-out infinite;
+    transition: background-color 300ms ease, border-color 300ms ease;
   }
 
   .hero__scroll:hover {
-    background-color: rgba(122, 31, 46, 0.15);
+    background-color: rgba(163, 52, 74, 0.12);
+    border-color: rgba(163, 52, 74, 0.5);
   }
 
   @keyframes bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(5px); }
-  }
-
-  @media (max-width: 767px) {
-    .hero__stat-card {
-      display: none;
-    }
+    50% { transform: translateX(-50%) translateY(6px); }
   }
 
   /* ============================================================
@@ -585,9 +640,9 @@ const base = import.meta.env.BASE_URL;
   ============================================================ */
   .trust-strip {
     background-color: var(--navy);
-    border-top: 0.5px solid rgba(122, 31, 46, 0.15);
-    border-bottom: 0.5px solid rgba(122, 31, 46, 0.15);
-    padding: 1rem 0;
+    border-top: 1px solid rgba(163, 52, 74, 0.12);
+    border-bottom: 1px solid rgba(163, 52, 74, 0.12);
+    padding: 1.1rem 0;
     overflow: hidden;
   }
 
@@ -607,16 +662,20 @@ const base = import.meta.env.BASE_URL;
   .trust-strip__items span {
     font-family: var(--font-mono);
     font-size: 0.625rem;
+    font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.78);
-    opacity: 1;
+    color: rgba(255, 255, 255, 0.7);
     flex-shrink: 0;
   }
 
   .trust-strip__sep {
-    color: var(--sage) !important;
-    opacity: 0.55 !important;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--sage) !important;
+    opacity: 0.4 !important;
+    font-size: 0 !important;
   }
 
   @keyframes ticker {
@@ -629,6 +688,7 @@ const base = import.meta.env.BASE_URL;
   ============================================================ */
   .premise-section {
     padding: 7rem 0;
+    background-color: var(--cream);
   }
 
   .premise-grid {
@@ -651,7 +711,7 @@ const base = import.meta.env.BASE_URL;
     font-family: var(--font-sans);
     font-size: 1.0625rem;
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--navy);
     margin-bottom: 1.25rem;
     max-width: 480px;
@@ -667,18 +727,19 @@ const base = import.meta.env.BASE_URL;
     gap: 0.5rem;
     font-family: var(--font-sans);
     font-size: 0.875rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--navy);
     text-decoration: none;
-    border-bottom: 0.5px solid rgba(23,30,25,0.25);
+    border-bottom: 1px solid rgba(23, 30, 25, 0.2);
     padding-bottom: 2px;
     transition: border-color 300ms ease, gap 300ms ease;
     margin-top: 0.5rem;
   }
 
   .premise__link:hover {
-    border-color: var(--navy);
+    border-color: var(--sage);
     gap: 0.75rem;
+    color: var(--sage);
   }
 
   @media (min-width: 900px) {
@@ -695,14 +756,32 @@ const base = import.meta.env.BASE_URL;
   .stats-section {
     background-color: var(--navy);
     padding: 5rem 0;
-    border-top: 0.5px solid rgba(122, 31, 46, 0.12);
-    border-bottom: 0.5px solid rgba(122, 31, 46, 0.12);
+    border-top: 1px solid rgba(163, 52, 74, 0.1);
+    border-bottom: 1px solid rgba(163, 52, 74, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle diagonal stripe pattern */
+  .stats-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 40px,
+      rgba(163, 52, 74, 0.02) 40px,
+      rgba(163, 52, 74, 0.02) 41px
+    );
+    pointer-events: none;
   }
 
   .stats-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
+    position: relative;
   }
 
   .stat-item {
@@ -710,13 +789,13 @@ const base = import.meta.env.BASE_URL;
     flex-direction: column;
     gap: 0.75rem;
     padding-left: 1.5rem;
-    border-left: 0.5px solid rgba(122, 31, 46, 0.3);
+    border-left: 1px solid rgba(163, 52, 74, 0.25);
   }
 
   .stat-item__num {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    line-height: 0.88;
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    line-height: 0.85;
     letter-spacing: -0.03em;
     color: var(--white);
   }
@@ -726,7 +805,7 @@ const base = import.meta.env.BASE_URL;
     font-size: 0.875rem;
     font-weight: 300;
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.85);
     max-width: 220px;
   }
 
@@ -738,7 +817,7 @@ const base = import.meta.env.BASE_URL;
 
     .stat-item {
       padding: 0 2.5rem;
-      border-left: 0.5px solid rgba(122, 31, 46, 0.2);
+      border-left: 1px solid rgba(163, 52, 74, 0.15);
     }
 
     .stat-item:first-child {
@@ -771,13 +850,14 @@ const base = import.meta.env.BASE_URL;
   }
 
   .outcomes-sub {
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 300;
+    font-family: var(--font-editorial);
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-style: italic;
     color: var(--taupe);
     max-width: 420px;
     margin-top: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   /* Bento grid */
@@ -788,29 +868,49 @@ const base = import.meta.env.BASE_URL;
   }
 
   .bento-card {
-    background-color: #fafafa;
-    border: 0.5px solid rgba(23, 30, 25, 0.08);
+    background-color: var(--cream);
+    border: 1px solid rgba(23, 30, 25, 0.06);
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     position: relative;
     overflow: hidden;
-    transition: border-color 400ms ease, background-color 400ms ease;
+    transition: border-color 500ms ease, background-color 500ms ease, transform 500ms var(--ease-out), box-shadow 500ms var(--ease-out);
   }
 
   .bento-card:hover {
-    border-color: rgba(23, 30, 25, 0.2);
+    border-color: rgba(163, 52, 74, 0.15);
     background-color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(23, 30, 25, 0.06);
+  }
+
+  /* Top accent line on hover */
+  .bento-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--sage), transparent);
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+
+  .bento-card:hover::before {
+    opacity: 1;
   }
 
   .bento-card__num {
     font-family: var(--font-mono);
     font-size: 0.625rem;
+    font-weight: 400;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--taupe);
-    opacity: 0.85;
+    opacity: 0.7;
   }
 
   .bento-card__body {
@@ -834,7 +934,7 @@ const base = import.meta.env.BASE_URL;
     font-family: var(--font-sans);
     font-size: 0.9375rem;
     font-weight: 300;
-    line-height: 1.65;
+    line-height: 1.7;
     color: var(--taupe);
     margin: 0;
   }
@@ -842,13 +942,20 @@ const base = import.meta.env.BASE_URL;
   .bento-card__tag {
     display: inline-block;
     align-self: flex-start;
-    padding: 0.25rem 0.75rem;
-    background-color: rgba(122, 31, 46, 0.15);
+    padding: 0.3rem 0.85rem;
+    background-color: rgba(163, 52, 74, 0.08);
+    border: 1px solid rgba(163, 52, 74, 0.08);
     font-family: var(--font-mono);
     font-size: 0.5625rem;
+    font-weight: 400;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--navy);
+    color: var(--sage);
+    transition: background-color 300ms ease;
+  }
+
+  .bento-card:hover .bento-card__tag {
+    background-color: rgba(163, 52, 74, 0.12);
   }
 
   @media (min-width: 768px) {
@@ -928,7 +1035,7 @@ const base = import.meta.env.BASE_URL;
     width: calc(100% - 48px);
     height: calc(100% - 48px);
     background-color: var(--sage);
-    opacity: 0.18;
+    opacity: 0.15;
   }
 
   .featured__image-box {
@@ -938,6 +1045,11 @@ const base = import.meta.env.BASE_URL;
     aspect-ratio: 4/3;
     overflow: hidden;
     background-color: #302b2f;
+    transition: filter 600ms ease;
+  }
+
+  .featured__image-wrap:hover .featured__image-box {
+    filter: grayscale(30%);
   }
 
   .featured__image-box :global(*) {
@@ -948,7 +1060,7 @@ const base = import.meta.env.BASE_URL;
 
   .featured__label {
     display: block;
-    font-family: var(--font-sans);
+    font-family: var(--font-mono);
     font-size: 0.6875rem;
     font-weight: 400;
     letter-spacing: 0.16em;
@@ -971,8 +1083,8 @@ const base = import.meta.env.BASE_URL;
     font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 300;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.85);
     max-width: 480px;
     margin-bottom: 2rem;
   }
@@ -991,7 +1103,7 @@ const base = import.meta.env.BASE_URL;
 
   .featured__link:hover {
     gap: 0.75rem;
-    opacity: 0.8;
+    opacity: 0.75;
   }
 
   @media (min-width: 900px) {
@@ -1002,7 +1114,7 @@ const base = import.meta.env.BASE_URL;
   }
 
   /* ============================================================
-     TESTIMONIALS — 3-card grid
+     TESTIMONIALS
   ============================================================ */
   .testimonials-section {
     background-color: var(--charcoal);
@@ -1030,34 +1142,47 @@ const base = import.meta.env.BASE_URL;
   }
 
   .t-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    transition: background-color 400ms ease, border-color 400ms ease;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 500ms ease, border-color 500ms ease, transform 500ms var(--ease-out);
   }
 
   .t-card:hover {
-    background: rgba(255, 255, 255, 0.09);
-    border-color: rgba(122, 31, 46, 0.3);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(163, 52, 74, 0.25);
+    transform: translateY(-2px);
   }
 
-  .t-card__quote-mark {
-    font-family: var(--font-display);
-    font-size: 3rem;
-    line-height: 1;
-    color: var(--sage);
-    opacity: 0.65;
+  /* Top accent line */
+  .t-card__accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--sage);
+    opacity: 0.5;
+    transition: width 500ms var(--ease-out), opacity 500ms ease;
+  }
+
+  .t-card:hover .t-card__accent {
+    width: 100%;
+    opacity: 0.7;
   }
 
   .t-card__text {
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.7;
-    color: var(--white);
+    font-family: var(--font-editorial);
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.92);
     flex: 1;
     margin: 0;
   }
@@ -1066,6 +1191,8 @@ const base = import.meta.env.BASE_URL;
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   .t-card__avatar {
@@ -1079,7 +1206,7 @@ const base = import.meta.env.BASE_URL;
     font-family: var(--font-display);
     font-size: 0.75rem;
     letter-spacing: 0.05em;
-    color: var(--navy);
+    color: var(--white);
     flex-shrink: 0;
   }
 
@@ -1096,9 +1223,10 @@ const base = import.meta.env.BASE_URL;
     display: block;
     font-family: var(--font-mono);
     font-size: 0.625rem;
+    font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.6);
   }
 
   @media (min-width: 768px) {
@@ -1112,7 +1240,7 @@ const base = import.meta.env.BASE_URL;
   ============================================================ */
   .insights-section {
     padding: 7rem 0;
-    background-color: var(--white);
+    background-color: var(--cream);
   }
 
   .insights-header {
@@ -1140,6 +1268,7 @@ const base = import.meta.env.BASE_URL;
     gap: 0.5rem;
     font-family: var(--font-mono);
     font-size: 0.625rem;
+    font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--taupe);
@@ -1149,7 +1278,7 @@ const base = import.meta.env.BASE_URL;
   }
 
   .insights-all:hover {
-    color: var(--navy);
+    color: var(--sage);
     gap: 0.75rem;
   }
 
@@ -1157,36 +1286,38 @@ const base = import.meta.env.BASE_URL;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1px;
-    background-color: rgba(23, 30, 25, 0.08);
-    border: 0.5px solid rgba(23, 30, 25, 0.08);
+    background-color: rgba(23, 30, 25, 0.06);
+    border: 1px solid rgba(23, 30, 25, 0.06);
   }
 
   .insight-card {
-    background-color: var(--white);
+    background-color: var(--cream);
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     text-decoration: none;
-    transition: background-color 300ms ease;
+    transition: background-color 400ms ease, transform 400ms var(--ease-out);
+    position: relative;
   }
 
   .insight-card:hover {
-    background-color: #fafafa;
+    background-color: var(--white);
   }
 
   .insight-card__tag {
     font-family: var(--font-mono);
     font-size: 0.5625rem;
+    font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--taupe);
+    color: var(--sage);
   }
 
   .insight-card__title {
     font-family: var(--font-display);
     font-size: clamp(1.25rem, 2vw, 1.5rem);
-    line-height: 1;
+    line-height: 1.05;
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: var(--navy);
@@ -1198,21 +1329,29 @@ const base = import.meta.env.BASE_URL;
     font-family: var(--font-sans);
     font-size: 0.9375rem;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--taupe);
     margin: 0;
   }
 
   .insight-card__arrow {
-    font-family: var(--font-sans);
-    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(23, 30, 25, 0.1);
+    border-radius: 50%;
     color: var(--sage);
-    transition: transform 300ms ease;
     align-self: flex-start;
+    transition: background-color 300ms ease, border-color 300ms ease, transform 300ms ease;
   }
 
   .insight-card:hover .insight-card__arrow {
-    transform: translateX(4px);
+    background-color: var(--sage);
+    border-color: var(--sage);
+    color: var(--white);
+    transform: rotate(-45deg) scale(1.05);
   }
 
   @media (min-width: 768px) {
@@ -1253,8 +1392,8 @@ const base = import.meta.env.BASE_URL;
     font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 300;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.85);
     max-width: 480px;
     margin-top: 0.5rem;
   }
@@ -1269,6 +1408,7 @@ const base = import.meta.env.BASE_URL;
   .cta-close__ghost {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
+    font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--sage);

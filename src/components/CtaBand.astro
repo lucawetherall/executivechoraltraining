@@ -37,10 +37,10 @@ const { label, headline, body, buttonText, buttonLink, variant = 'navy' } = Astr
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 2.5rem;
+    width: 3rem;
     height: 2px;
-    background-color: var(--gold);
-    opacity: 0.6;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.5;
   }
 
   .cta-band--navy h2 {
@@ -48,7 +48,7 @@ const { label, headline, body, buttonText, buttonLink, variant = 'navy' } = Astr
   }
 
   .cta-band--light {
-    background-color: var(--warm-white);
+    background-color: var(--cream);
   }
 
   .cta-band--light::before {
@@ -57,10 +57,10 @@ const { label, headline, body, buttonText, buttonLink, variant = 'navy' } = Astr
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 2.5rem;
+    width: 3rem;
     height: 2px;
-    background-color: var(--gold);
-    opacity: 0.5;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.4;
   }
 
   .cta-band h2 {
@@ -73,9 +73,10 @@ const { label, headline, body, buttonText, buttonLink, variant = 'navy' } = Astr
     margin: 0 auto 2.25rem;
     font-size: 1.05rem;
     line-height: 1.8;
+    font-weight: 300;
   }
 
   .cta-band--navy p {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.8);
   }
 </style>
