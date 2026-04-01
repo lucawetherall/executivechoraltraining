@@ -328,7 +328,7 @@ const base = import.meta.env.BASE_URL;
   <section class="cta-close" aria-label="Call to action">
     <div class="cta-close__inner container">
       <div class="cta-close__text">
-        <span class="dynamic-mark" style="color: var(--sage); opacity: 0.6;">fff</span>
+        <span class="dynamic-mark" style="color: var(--sage);">fff</span>
         <h2 class="cta-close__heading">Ready to lead?</h2>
         <p class="cta-close__body">Book a free thirty-minute consultation with our music director and experience the podium for yourself.</p>
       </div>
@@ -1038,15 +1038,9 @@ const base = import.meta.env.BASE_URL;
   .featured__image-box {
     position: relative;
     z-index: 1;
-    filter: grayscale(60%);
     aspect-ratio: 4/3;
     overflow: hidden;
     background-color: #302b2f;
-    transition: filter 600ms ease;
-  }
-
-  .featured__image-wrap:hover .featured__image-box {
-    filter: grayscale(30%);
   }
 
   .featured__image-box :global(*) {
