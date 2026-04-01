@@ -5,15 +5,16 @@ interface Props {
   bio: string;
   image?: string;
   imagePosition?: string;
+  imageScale?: number;
 }
 
-const { name, role, bio, image, imagePosition = 'center top' } = Astro.props;
+const { name, role, bio, image, imagePosition = 'center top', imageScale = 1 } = Astro.props;
 ---
 
 <div class="team-card">
   <div class="team-card__photo" aria-label={`Photo of ${name}`}>
     {image ? (
-      <img src={image} alt={`Photo of ${name}`} class="team-card__photo-img" style={`object-position: ${imagePosition}`} />
+      <img src={image} alt={`Photo of ${name}`} class="team-card__photo-img" style={`object-position: ${imagePosition}; transform: scale(${imageScale})`} />
     ) : (
       <span>{name.split(' ').map((n: string) => n[0]).join('')}</span>
     )}
